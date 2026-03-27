@@ -32,10 +32,10 @@ function Confetti() {
   )
 }
 
-export default function S6_ThankYou() {
-  const { answers, setAnswer } = useFunnelStore()
+export default function S7_ThankYou() {
+  const { answers } = useFunnelStore()
   const [showConfetti, setShowConfetti] = useState(false)
-  const [showDatePicker, setShowDatePicker] = useState(false)
+  const wantsTour = answers.wantsTour === 'yes'
 
   useEffect(() => {
     setShowConfetti(true)
@@ -47,12 +47,12 @@ export default function S6_ThankYou() {
     <SlideWrapper>
       {showConfetti && <Confetti />}
 
-      <div className="flex flex-col items-center min-h-[100dvh] px-6 py-12 bg-white">
+      <div className="flex flex-col items-center justify-center min-h-[100dvh] px-6 py-12 bg-white">
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: 'spring', stiffness: 200, damping: 15, delay: 0.2 }}
-          className="w-20 h-20 rounded-full bg-light-gray flex items-center justify-center mb-6 mt-8"
+          className="w-20 h-20 rounded-full bg-light-gray flex items-center justify-center mb-6"
         >
           <span className="text-4xl">🎉</span>
         </motion.div>
@@ -72,7 +72,10 @@ export default function S6_ThankYou() {
           transition={{ delay: 0.6 }}
           className="text-muted text-base leading-relaxed mb-10 text-center max-w-sm"
         >
-          One of our event coordinators will personally reach out within 24 hours.
+          {wantsTour
+            ? "We got your tour request. One of our event coordinators will reach out within 24 hours to confirm your date."
+            : "One of our event coordinators will personally reach out within 24 hours."
+          }
         </motion.p>
 
         <motion.div
@@ -86,43 +89,6 @@ export default function S6_ThankYou() {
             className="flex items-center justify-center gap-2 rounded-2xl bg-blue text-white px-6 py-4 font-semibold text-sm"
           >
             View wedding packages →
-          </a>
-
-          {!showDatePicker ? (
-            <button
-              onClick={() => setShowDatePicker(true)}
-              className="flex items-center justify-center gap-2 rounded-2xl border-2 border-border bg-white px-6 py-4 text-black font-semibold text-sm"
-            >
-              Book a visit in person 📍
-            </button>
-          ) : (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="rounded-2xl border-2 border-border bg-white p-4"
-            >
-              <p className="text-black font-semibold text-sm mb-3">What&apos;s your preferred date?</p>
-              <input
-                type="date"
-                onChange={(e) => setAnswer('tourDate', e.target.value)}
-                className="w-full rounded-xl border-2 border-border bg-white px-4 py-3 text-base text-black focus:border-black focus:outline-none transition-colors mb-3"
-              />
-              <button
-                onClick={() => setShowDatePicker(false)}
-                className="w-full rounded-xl bg-black py-3 text-white text-sm font-semibold"
-              >
-                Request this date →
-              </button>
-            </motion.div>
-          )}
-
-          <a
-            href="https://www.instagram.com/theroostertail/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 rounded-2xl border-2 border-border bg-white px-6 py-4 text-black font-semibold text-sm"
-          >
-            📸 Follow @theroostertail
           </a>
         </motion.div>
 

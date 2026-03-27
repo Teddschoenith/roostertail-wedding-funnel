@@ -11,7 +11,8 @@ import S2_Timeline from '@/components/screens/S2_Timeline'
 import S3_GuestCount from '@/components/screens/S3_GuestCount'
 import S4_Pricing from '@/components/screens/S4_Pricing'
 import S5_LeadCapture from '@/components/screens/S5_LeadCapture'
-import S6_ThankYou from '@/components/screens/S6_ThankYou'
+import S6_TourQuestion from '@/components/screens/S6_TourQuestion'
+import S7_ThankYou from '@/components/screens/S7_ThankYou'
 
 const screens = [
   { component: S1_Landing, name: 'landing' },
@@ -19,7 +20,8 @@ const screens = [
   { component: S3_GuestCount, name: 'guest_count' },
   { component: S4_Pricing, name: 'pricing' },
   { component: S5_LeadCapture, name: 'lead_capture' },
-  { component: S6_ThankYou, name: 'thank_you' },
+  { component: S6_TourQuestion, name: 'tour_question' },
+  { component: S7_ThankYou, name: 'thank_you' },
 ]
 
 export default function FunnelContainer() {

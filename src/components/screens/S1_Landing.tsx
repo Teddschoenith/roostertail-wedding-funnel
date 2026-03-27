@@ -176,33 +176,33 @@ export default function S1_Landing() {
         <div className="flex flex-col gap-4">
           {[
             {
-              quote: "We didn't have to find a caterer, a bar service, chairs, linens — nothing. The Roostertail handled literally everything.",
-              name: 'Sarah & Michael',
-              detail: '220 guests · June 2025',
-              img: '/images/couple-entrance-sunglasses-fun.webp',
+              quote: "honestly we visited like 5 other venues and none of them even came close. the fact that catering and the bar and literally everything is just included?? we didnt have to call a single vendor. that alone sold us",
+              name: 'Eliane & Paul',
+              detail: 'May 2025',
+              img: '/images/couple-dock-waterfront-golden-hour.webp',
             },
             {
-              quote: "From our first tour to the last dance, everything was seamless. Our coordinator made sure we didn't have to worry about a single thing.",
-              name: 'Jessica & David',
-              detail: '185 guests · September 2024',
+              quote: "our coordinator was amazing like she remembered every little detail we told her months ago. the day of we didnt have to think about anything we just showed up and had the best night of our lives",
+              name: 'Emma & Emily',
+              detail: 'August 2025',
+              img: '/images/outdoor-waterfront-ceremony-aisle.webp',
+            },
+            {
+              quote: "my mom kept asking me if i was stressed and i literally wasnt lol. everything was just handled. the food was incredible too like our guests are still talking about it",
+              name: 'Lindsey & Ryan',
+              detail: 'June 2024',
               img: '/images/couple-walking-dock-string-lights.webp',
             },
-            {
-              quote: "I was dreading vendor coordination. Then we found The Roostertail and it was just one call. One contract. Done.",
-              name: 'Amanda & Chris',
-              detail: '310 guests · October 2024',
-              img: '/images/couple-celebrating-candid-joy.webp',
-            },
           ].map((t) => (
-            <div key={t.name} className="bg-white rounded-2xl p-5">
-              <div className="flex items-center mb-3">
-                <FiveStars size={14} />
-              </div>
-              <p className="text-black/80 text-sm italic leading-relaxed mb-4">
-                &ldquo;{t.quote}&rdquo;
-              </p>
-              <div className="flex items-center gap-3">
-                <img src={t.img} alt={t.name} className="w-10 h-10 rounded-full object-cover" />
+            <div key={t.name} className="bg-white rounded-2xl overflow-hidden">
+              <img src={t.img} alt={t.name} className="w-full aspect-[16/9] object-cover" />
+              <div className="p-5">
+                <div className="flex items-center mb-3">
+                  <FiveStars size={14} />
+                </div>
+                <p className="text-black/80 text-sm italic leading-relaxed mb-4">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
                 <div>
                   <p className="font-semibold text-sm text-black">{t.name}</p>
                   <p className="text-muted text-xs">{t.detail}</p>

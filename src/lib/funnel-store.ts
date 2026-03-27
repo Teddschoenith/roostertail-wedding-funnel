@@ -36,7 +36,7 @@ interface FunnelState {
 
 export const useFunnelStore = create<FunnelState>((set) => ({
   currentStep: 0,
-  totalSteps: 6,
+  totalSteps: 7,
   answers: {},
   utmParams: {},
   direction: 1,

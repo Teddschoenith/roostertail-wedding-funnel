@@ -36,7 +36,7 @@ export default function S2_Timeline() {
           transition={{ delay: 0.2 }}
           className="text-muted text-sm mb-8"
         >
-          Helps us check availability for you
+          Pick one and we&apos;ll take it from there
         </motion.p>
 
         <div className="grid grid-cols-2 gap-3">
