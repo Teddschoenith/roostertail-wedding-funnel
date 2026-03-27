@@ -110,7 +110,7 @@ export default function S5_LeadCapture() {
               transition={{ duration: 0.3 }}
             >
               <motion.h2
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="font-display text-3xl font-bold text-black mb-2 text-center"
@@ -131,9 +131,9 @@ export default function S5_LeadCapture() {
                 {roles.slice(0, 2).map((role, i) => (
                   <motion.button
                     key={role.label}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 + i * 0.08 }}
+                    transition={{ delay: 0.1 + i * 0.04 }}
                     onClick={() => {
                       setSelectedRole(role.label)
                       setAnswer('role', role.label)
@@ -157,9 +157,9 @@ export default function S5_LeadCapture() {
                 {roles.slice(2).map((role, i) => (
                   <motion.button
                     key={role.label}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.46 + i * 0.08 }}
+                    transition={{ delay: 0.15 + i * 0.04 }}
                     onClick={() => {
                       setSelectedRole(role.label)
                       setAnswer('role', role.label)
@@ -190,7 +190,7 @@ export default function S5_LeadCapture() {
               transition={{ duration: 0.3 }}
             >
               <motion.h2
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="font-display text-3xl font-bold text-black mb-2"

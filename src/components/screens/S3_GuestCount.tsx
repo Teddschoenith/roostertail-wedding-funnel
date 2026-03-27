@@ -23,7 +23,7 @@ export default function S3_GuestCount() {
     <SlideWrapper>
       <div className="flex flex-col justify-center min-h-[100dvh] px-6 pt-16 pb-12 bg-white">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="font-display text-3xl font-bold text-black mb-2"
@@ -43,9 +43,9 @@ export default function S3_GuestCount() {
           {options.map((opt, i) => (
             <motion.button
               key={opt.label}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 + i * 0.08 }}
+              transition={{ delay: 0.1 + i * 0.04 }}
               onClick={() => handleSelect(opt.label)}
               className={`
                 overflow-hidden rounded-2xl border-2 text-left

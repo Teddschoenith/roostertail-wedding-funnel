@@ -44,7 +44,7 @@ export default function S6_TourQuestion() {
               transition={{ duration: 0.3 }}
             >
               <motion.h2
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="font-display text-3xl font-bold text-black mb-2 text-center"
@@ -62,7 +62,7 @@ export default function S6_TourQuestion() {
 
               <div className="flex gap-3">
                 <motion.button
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                   onClick={handleYes}
@@ -78,7 +78,7 @@ export default function S6_TourQuestion() {
                   </div>
                 </motion.button>
                 <motion.button
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                   onClick={handleNo}
