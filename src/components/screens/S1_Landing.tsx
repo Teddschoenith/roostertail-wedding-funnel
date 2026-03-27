@@ -203,7 +203,7 @@ export default function S1_Landing() {
             },
           ].map((t) => (
             <div key={t.name} className="bg-white rounded-2xl overflow-hidden">
-              <img src={t.img} alt={t.name} className="w-full aspect-[16/9] object-cover" />
+              <img src={t.img} alt={t.name} className="w-full aspect-[16/9] object-cover" loading="lazy" />
               <div className="p-5">
                 <div className="flex items-center mb-3">
                   <FiveStars size={14} />
