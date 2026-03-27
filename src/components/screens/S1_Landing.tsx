@@ -176,21 +176,21 @@ export default function S1_Landing() {
         <div className="flex flex-col gap-4">
           {[
             {
-              quote: "honestly we visited like 5 other venues and none of them even came close. the fact that catering and the bar and literally everything is just included?? we didnt have to call a single vendor. that alone sold us",
+              quote: "honestly we visited five other venues and none of them even came close. what we wanted was there, the water, the experience, and the trust that this was going to be the best night of our lives. it was.",
               name: 'Eliane & Paul',
-              detail: 'May 2025',
+              detail: '',
               img: '/images/couple-dock-waterfront-golden-hour.webp',
             },
             {
               quote: "our coordinator was amazing like she remembered every little detail we told her months ago. the day of we didnt have to think about anything we just showed up and had the best night of our lives",
               name: 'Emma & Emily',
-              detail: 'August 2025',
+              detail: '',
               img: '/images/outdoor-waterfront-ceremony-aisle.webp',
             },
             {
-              quote: "my mom kept asking me if i was stressed and i literally wasnt lol. everything was just handled. the food was incredible too like our guests are still talking about it",
+              quote: "i went into my wedding journey thinking i was going to be super stressed. i was reassured from the moment i got there that stress wasn't an option. so much of the stress in weddings was handled by them. it was my wedding day when i realized i made two of the best decisions of my life.",
               name: 'Lindsey & Ryan',
-              detail: 'June 2024',
+              detail: '',
               img: '/images/couple-walking-dock-string-lights.webp',
             },
           ].map((t) => (
@@ -200,13 +200,9 @@ export default function S1_Landing() {
                 <div className="flex items-center mb-3">
                   <FiveStars size={14} />
                 </div>
-                <p className="text-black/80 text-sm italic leading-relaxed mb-4">
+                <p className="text-black/80 text-sm italic leading-relaxed">
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <div>
-                  <p className="font-semibold text-sm text-black">{t.name}</p>
-                  <p className="text-muted text-xs">{t.detail}</p>
-                </div>
               </div>
             </div>
           ))}
@@ -272,10 +268,10 @@ export default function S1_Landing() {
           Detroit&apos;s waterfront event venue since 1958
         </h2>
         <p className="text-muted text-sm leading-relaxed mb-4">
-          The Roostertail sits on the Detroit River with panoramic waterfront views that have hosted over 10,000 celebrations. We&apos;re not just a venue — we&apos;re a full-service wedding production team.
+          The Roostertail sits on the Detroit River with panoramic waterfront views that have hosted over 10,000 celebrations. We&apos;re not just a venue, we&apos;re a full-service wedding production team.
         </p>
         <p className="text-muted text-sm leading-relaxed">
-          From the moment you book to the last song of the night, our dedicated coordinator and full staff handle every detail. That&apos;s why couples choose us — zero vendor headaches, zero surprises, just a great party.
+          From the moment you book to the last song of the night, our dedicated coordinator and full staff handle every detail. That&apos;s why couples choose us. No surprises, just a great party.
         </p>
       </section>
 

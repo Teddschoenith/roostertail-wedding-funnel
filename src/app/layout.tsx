@@ -2,10 +2,10 @@ import type { Metadata, Viewport } from 'next'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
-  title: 'The Roostertail — Detroit\'s Waterfront Wedding Venue',
+  title: 'The Roostertail | Detroit\'s Waterfront Wedding Venue',
   description: 'Plan your dream waterfront wedding at The Roostertail. All-inclusive packages starting at $139/pp. Detroit\'s premier event venue since 1958.',
   openGraph: {
-    title: 'The Roostertail — Detroit\'s Waterfront Wedding Venue',
+    title: 'The Roostertail | Detroit\'s Waterfront Wedding Venue',
     description: 'All-inclusive waterfront weddings in Detroit. Get your custom quote.',
     type: 'website',
   },

@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 const faqs = [
   {
     q: 'What is included in the per-person price?',
-    a: 'Everything — plated or buffet dinner, full open bar with bartenders, tax, and gratuity. One number, no add-ons.',
+    a: 'Everything. Plated or buffet dinner, full open bar with bartenders, tax, and gratuity. One number, no add-ons.',
   },
   {
     q: 'Do I need to hire separate vendors for chairs, tables, or linens?',
@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: 'Is parking free for guests?',
-    a: 'Yes. Complimentary parking for all guests — no shuttles, no valet fees, no headaches.',
+    a: 'Yes. Complimentary parking for all guests. No shuttles, no valet fees.',
   },
   {
     q: 'Can I have my ceremony and reception at The Roostertail?',
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: 'What does the event coordinator do?',
-    a: 'Your dedicated coordinator handles everything from the day you book to the last dance — floor plans, vendor timing, day-of logistics, and anything else that comes up.',
+    a: 'Your dedicated coordinator handles everything from the day you book to the last dance. Floor plans, vendor timing, day-of logistics, and anything else that comes up.',
   },
 ]
 
