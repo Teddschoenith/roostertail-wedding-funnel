@@ -15,6 +15,25 @@ import S6_LeadCapture from '@/components/screens/S5_LeadCapture'
 import S7_TourQuestion from '@/components/screens/S6_TourQuestion'
 import S8_ThankYou from '@/components/screens/S7_ThankYou'
 
+// Preload all quiz images so they're cached before users swipe to them
+const quizImages = [
+  '/images/outdoor-waterfront-ceremony-aisle.webp',
+  '/images/first-dance-sunset-windows.webp',
+  '/images/couple-dock-waterfront-golden-hour.webp',
+  '/images/reception-decor-purple-cherry-blossoms.webp',
+  '/images/couple-entrance-sunglasses-fun.webp',
+  '/images/couple-patio-cocktails-purple-fountain.webp',
+  '/images/first-dance-ballroom-crowd.webp',
+  '/images/dance-floor-packed-party-waterfront.webp',
+  '/images/guests-packed-ballroom-event.webp',
+  '/images/role-bride-portrait.webp',
+  '/images/role-groom-groomsmen.webp',
+  '/images/role-planner-signing.webp',
+  '/images/role-guests-ceremony.webp',
+  '/images/role-other-baby.webp',
+  '/images/venue-exterior-night-fountains.webp',
+]
+
 const screens = [
   { component: S1_Landing, name: 'landing' },
   { component: S2_WeddingDate, name: 'wedding_date' },
@@ -31,6 +50,11 @@ export default function FunnelContainer() {
 
   useEffect(() => {
     setUTMParams(captureUTMParams())
+    // Preload all quiz images in background
+    quizImages.forEach((src) => {
+      const img = new Image()
+      img.src = src
+    })
   }, [setUTMParams])
 
   useEffect(() => {
