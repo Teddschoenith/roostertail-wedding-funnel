@@ -110,7 +110,7 @@ export default function S4_Pricing() {
           transition={{ delay: 2.4 }}
           className="text-center text-muted text-sm mb-6 font-medium"
         >
-          And that&apos;s it. No surprises. No extra vendors to find.
+          And that&apos;s it!
         </motion.p>
 
         <motion.button
