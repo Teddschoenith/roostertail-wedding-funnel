@@ -7,21 +7,23 @@ import { captureUTMParams, trackFunnelStep } from '@/lib/analytics'
 import ProgressBar from './ProgressBar'
 import BackButton from './BackButton'
 import S1_Landing from '@/components/screens/S1_Landing'
-import S2_Timeline from '@/components/screens/S2_Timeline'
-import S3_GuestCount from '@/components/screens/S3_GuestCount'
-import S4_Pricing from '@/components/screens/S4_Pricing'
-import S5_LeadCapture from '@/components/screens/S5_LeadCapture'
-import S6_TourQuestion from '@/components/screens/S6_TourQuestion'
-import S7_ThankYou from '@/components/screens/S7_ThankYou'
+import S2_WeddingDate from '@/components/screens/S2_WeddingDate'
+import S3_Timeline from '@/components/screens/S2_Timeline'
+import S4_GuestCount from '@/components/screens/S3_GuestCount'
+import S5_Pricing from '@/components/screens/S4_Pricing'
+import S6_LeadCapture from '@/components/screens/S5_LeadCapture'
+import S7_TourQuestion from '@/components/screens/S6_TourQuestion'
+import S8_ThankYou from '@/components/screens/S7_ThankYou'
 
 const screens = [
   { component: S1_Landing, name: 'landing' },
-  { component: S2_Timeline, name: 'timeline' },
-  { component: S3_GuestCount, name: 'guest_count' },
-  { component: S4_Pricing, name: 'pricing' },
-  { component: S5_LeadCapture, name: 'lead_capture' },
-  { component: S6_TourQuestion, name: 'tour_question' },
-  { component: S7_ThankYou, name: 'thank_you' },
+  { component: S2_WeddingDate, name: 'wedding_date' },
+  { component: S3_Timeline, name: 'timeline' },
+  { component: S4_GuestCount, name: 'guest_count' },
+  { component: S5_Pricing, name: 'pricing' },
+  { component: S6_LeadCapture, name: 'lead_capture' },
+  { component: S7_TourQuestion, name: 'tour_question' },
+  { component: S8_ThankYou, name: 'thank_you' },
 ]
 
 export default function FunnelContainer() {
