@@ -161,14 +161,16 @@ export default function S5_LeadCapture() {
                       setSelectedRole(role.label)
                       setAnswer('role', role.label)
                     }}
-                    className="overflow-hidden rounded-2xl shadow-sm active:scale-[0.97] transition-all"
+                    className="overflow-hidden rounded-2xl shadow-sm active:scale-[0.97] transition-all flex flex-col bg-blue"
                   >
-                    <img
-                      src={role.img}
-                      alt={role.label}
-                      className="w-full aspect-[3/4] object-cover"
-                    />
-                    <div className="py-2.5 px-1 text-center font-bold text-xs bg-blue text-white leading-tight">
+                    <div className="w-full aspect-[3/4] overflow-hidden">
+                      <img
+                        src={role.img}
+                        alt={role.label}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="py-2.5 px-1 text-center font-bold text-xs text-white leading-tight flex-1 flex items-center justify-center">
                       {role.label}
                     </div>
                   </motion.button>
@@ -217,7 +219,7 @@ export default function S5_LeadCapture() {
               <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3">
                 <div>
                   <input
-                    {...register('yourName', { required: 'Required' })}
+                    {...register('yourName')}
                     placeholder={fields!.name}
                     className={inputClass}
                   />
@@ -226,7 +228,7 @@ export default function S5_LeadCapture() {
 
                 <div>
                   <input
-                    {...register('partnerName', { required: 'Required' })}
+                    {...register('partnerName')}
                     placeholder={fields!.partner}
                     className={inputClass}
                   />
@@ -235,10 +237,7 @@ export default function S5_LeadCapture() {
 
                 <div>
                   <input
-                    {...register('email', {
-                      required: 'Required',
-                      pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Invalid email' },
-                    })}
+                    {...register('email')}
                     type="email"
                     placeholder="Email"
                     className={inputClass}
@@ -248,7 +247,7 @@ export default function S5_LeadCapture() {
 
                 <div>
                   <input
-                    {...register('phone', { required: 'Required' })}
+                    {...register('phone')}
                     type="tel"
                     placeholder="Phone"
                     className={inputClass}
