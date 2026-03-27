@@ -8,7 +8,7 @@ const buckets = [
   {
     title: 'Ceremony Fee',
     subtitle: 'If applicable',
-    items: ['Chairs & setup', 'Rehearsal coordination', 'Aisleway decor', 'Weather backup plan'],
+    items: ['Chairs & setup', 'Rehearsal coordination', 'Weather backup plan'],
     icon: '💍',
   },
   {
@@ -110,7 +110,7 @@ export default function S4_Pricing() {
           transition={{ delay: 2.4 }}
           className="text-center text-muted text-sm mb-6 font-medium"
         >
-          And that&apos;s it. No vendor spreadsheet. No parking headaches.
+          And that&apos;s it. No surprises. No extra vendors to find.
         </motion.p>
 
         <motion.button
