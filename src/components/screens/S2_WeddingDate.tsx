@@ -56,7 +56,7 @@ export default function S2_WeddingDate() {
                 }
               `}
             >
-              <img src={opt.img} alt={opt.label} className="w-full aspect-[16/10] object-cover" />
+              <img src={opt.img} alt={opt.label} className="w-full aspect-[4/3] object-cover" />
               <div className="p-3 bg-white">
                 <p className="font-semibold text-sm text-black">
                   {opt.emoji} {opt.label}
