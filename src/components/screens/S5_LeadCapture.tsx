@@ -70,6 +70,8 @@ export default function S5_LeadCapture() {
       role: selectedRole,
       timeline: answers.timeline,
       guestCount: answers.guestCount,
+      headlineVariant: answers.headlineVariant,
+      beenBefore: answers.beenBefore,
       utmParams,
       submittedAt: new Date().toISOString(),
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',

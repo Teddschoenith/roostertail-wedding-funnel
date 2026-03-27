@@ -1,9 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import SlideWrapper from '@/components/funnel/SlideWrapper'
 import { useFunnelStore } from '@/lib/funnel-store'
+import { getHeadlineVariant, getHeadline, type HeadlineVariant } from '@/lib/ab-test'
 import FAQ from '@/components/funnel/FAQ'
 
 const fadeUp = {
@@ -57,6 +58,13 @@ function FiveStars({ size = 20 }: { size?: number }) {
 export default function S1_Landing() {
   const { goNext, setAnswer } = useFunnelStore()
   const [beenBefore, setBeenBefore] = useState<string | null>(null)
+  const [variant, setVariant] = useState<HeadlineVariant>('A')
+
+  useEffect(() => {
+    const v = getHeadlineVariant()
+    setVariant(v)
+    setAnswer('headlineVariant', v)
+  }, [])
 
   return (
     <SlideWrapper>
@@ -73,7 +81,7 @@ export default function S1_Landing() {
           custom={1} variants={fadeUp} initial="hidden" animate="visible"
           className="font-display text-[2rem] leading-[1.15] font-bold text-black mb-6 text-center"
         >
-          One venue. One price.{'\n'}Nothing left to figure out.
+          {getHeadline(variant)}
         </motion.h1>
 
         <motion.p
