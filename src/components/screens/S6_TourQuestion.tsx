@@ -86,25 +86,25 @@ export default function S6_TourQuestion() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="text-center"
+              className="text-center stagger mt-[-15vh]"
             >
-              <div className="w-16 h-16 rounded-full bg-light-gray flex items-center justify-center mb-6 mx-auto">
-                <span className="text-3xl">📍</span>
+              <div className="w-12 h-12 rounded-full bg-light-gray flex items-center justify-center mb-4 mx-auto">
+                <span className="text-2xl">📍</span>
               </div>
 
               <h2 className="font-display text-2xl font-bold text-black mb-2">
                 What&apos;s your preferred date?
               </h2>
-              <p className="text-muted text-sm mb-6">
+              <p className="text-blue text-sm font-medium mb-6">
                 We&apos;ll see if that works and confirm with you
               </p>
 
-              <div className="max-w-[280px] mx-auto">
+              <div className="max-w-[240px] mx-auto">
                 <input
                   type="date"
                   value={tourDate}
                   onChange={(e) => setTourDate(e.target.value)}
-                  className="w-full rounded-xl border-2 border-border bg-white px-4 py-3 text-base text-black focus:border-blue focus:outline-none transition-colors mb-4"
+                  className="w-full rounded-xl border border-border bg-white px-4 py-3 text-base text-black focus:border-blue focus:outline-none transition-colors mb-4"
                 />
 
                 <button
