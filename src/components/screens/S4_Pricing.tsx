@@ -36,7 +36,7 @@ export default function S4_Pricing() {
 
   return (
     <SlideWrapper>
-      <div className="flex flex-col min-h-[100dvh] px-6 pt-16 pb-12 bg-white">
+      <div className="flex flex-col min-h-[100dvh] px-6 pt-16 pb-12 bg-white stagger">
         <h2 className="font-display text-3xl font-bold text-black mb-2">
           This is what separates us from everyone else
         </h2>

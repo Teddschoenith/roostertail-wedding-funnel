@@ -22,7 +22,7 @@ export default function S2_WeddingDate() {
 
   return (
     <SlideWrapper>
-      <div className="flex flex-col justify-center min-h-[100dvh] px-6 pt-16 pb-12 bg-white">
+      <div className="flex flex-col justify-center min-h-[100dvh] px-6 pt-16 pb-12 bg-white stagger">
         <h2 className="font-display text-3xl font-bold text-black mb-2">
           When do you want your wedding?
         </h2>

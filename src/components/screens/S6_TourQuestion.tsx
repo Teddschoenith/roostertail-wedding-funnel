@@ -40,6 +40,7 @@ export default function S6_TourQuestion() {
               initial={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.15 }}
+              className="stagger"
             >
               <h2 className="font-display text-3xl font-bold text-black mb-2 text-center">
                 Want to come see it in person?
