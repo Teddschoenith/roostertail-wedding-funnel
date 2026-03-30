@@ -60,21 +60,21 @@ export default function S6_TourQuestion() {
                 We&apos;d love to show you around
               </motion.p>
 
-              <div className="flex gap-3">
+              <div className="grid grid-cols-2 gap-3">
                 <motion.button
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                   onClick={handleYes}
-                  className="flex-1 overflow-hidden rounded-2xl shadow-sm active:scale-[0.97] transition-all"
+                  className="overflow-hidden rounded-2xl shadow-sm active:scale-[0.97] transition-all flex flex-col"
                 >
                   <img
                     src="/images/venue-exterior-night-fountains.webp"
                     alt="The Roostertail venue"
-                    className="w-full aspect-[3/4] object-cover"
+                    className="w-full aspect-[4/3] object-cover"
                   />
-                  <div className="py-3 px-3 text-center font-bold text-base bg-blue text-white">
-                    Yes!
+                  <div className="py-3 px-3 text-center font-bold text-base bg-blue text-white flex-1 flex items-center justify-center">
+                    Yes, let&apos;s tour!
                   </div>
                 </motion.button>
                 <motion.button
@@ -82,14 +82,14 @@ export default function S6_TourQuestion() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                   onClick={handleNo}
-                  className="flex-1 overflow-hidden rounded-2xl shadow-sm active:scale-[0.97] transition-all"
+                  className="overflow-hidden rounded-2xl shadow-sm active:scale-[0.97] transition-all flex flex-col"
                 >
                   <img
                     src="/images/couple-patio-cocktails-purple-fountain.webp"
                     alt="Just call me"
-                    className="w-full aspect-[3/4] object-cover"
+                    className="w-full aspect-[4/3] object-cover"
                   />
-                  <div className="py-3 px-3 text-center font-bold text-base bg-blue text-white">
+                  <div className="py-3 px-3 text-center font-bold text-base bg-blue text-white flex-1 flex items-center justify-center">
                     Not yet, just call me
                   </div>
                 </motion.button>
@@ -121,20 +121,22 @@ export default function S6_TourQuestion() {
                 We&apos;ll see if that works and confirm with you
               </p>
 
-              <input
-                type="date"
-                value={tourDate}
-                onChange={(e) => setTourDate(e.target.value)}
-                className="w-full rounded-xl border-2 border-border bg-white px-4 py-4 text-base text-black focus:border-blue focus:outline-none transition-colors mb-4"
-              />
+              <div className="max-w-[280px] mx-auto">
+                <input
+                  type="date"
+                  value={tourDate}
+                  onChange={(e) => setTourDate(e.target.value)}
+                  className="w-full rounded-xl border-2 border-border bg-white px-4 py-3 text-base text-black focus:border-blue focus:outline-none transition-colors mb-4"
+                />
 
-              <button
-                onClick={handleDateSubmit}
-                disabled={!tourDate}
-                className="w-full rounded-2xl bg-blue py-4 text-white text-base font-semibold active:scale-[0.97] transition-transform disabled:opacity-40"
-              >
-                Request this date →
-              </button>
+                <button
+                  onClick={handleDateSubmit}
+                  disabled={!tourDate}
+                  className="w-full rounded-2xl bg-blue py-4 text-white text-base font-semibold active:scale-[0.97] transition-transform disabled:opacity-40"
+                >
+                  Request this date →
+                </button>
+              </div>
             </motion.div>
           ) : (
             /* ===== CONFIRMED ===== */
