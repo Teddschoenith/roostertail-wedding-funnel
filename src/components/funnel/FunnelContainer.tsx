@@ -17,20 +17,32 @@ import S8_ThankYou from '@/components/screens/S7_ThankYou'
 
 // Preload all quiz images so they're cached before users swipe to them
 const quizImages = [
+  // Landing page
+  '/images/champagne-tower-bride-pouring.webp',
+  '/images/couple-walking-dock-string-lights.webp',
+  '/images/couple-fountain-night-dramatic.webp',
+  '/images/waterfront-tablescape-chiavari-chairs.webp',
+  '/images/led-dance-floor-the-tail-logo.webp',
+  '/images/hora-chair-dance-celebration.webp',
+  '/images/saxophonist-florals-waterfront.webp',
+  // Wedding date + timeline
   '/images/outdoor-waterfront-ceremony-aisle.webp',
   '/images/first-dance-sunset-windows.webp',
   '/images/couple-dock-waterfront-golden-hour.webp',
   '/images/reception-decor-purple-cherry-blossoms.webp',
   '/images/couple-entrance-sunglasses-fun.webp',
+  // Guest count
   '/images/couple-patio-cocktails-purple-fountain.webp',
   '/images/first-dance-ballroom-crowd.webp',
   '/images/dance-floor-packed-party-waterfront.webp',
   '/images/guests-packed-ballroom-event.webp',
+  // Lead capture roles
   '/images/role-bride-portrait.webp',
   '/images/role-groom-groomsmen.webp',
   '/images/role-planner-signing.webp',
   '/images/role-guests-ceremony.webp',
   '/images/role-other-baby.webp',
+  // Tour question + shared
   '/images/venue-exterior-night-fountains.webp',
 ]
 
