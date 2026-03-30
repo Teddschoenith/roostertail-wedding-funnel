@@ -6,7 +6,7 @@ import { useFunnelStore } from '@/lib/funnel-store'
 
 const options = [
   { label: 'This Spring / Summer', emoji: '☀️', img: '/images/outdoor-waterfront-ceremony-aisle.webp', pos: 'center' },
-  { label: 'This Fall / Winter', emoji: '🍂', img: '/images/first-dance-sunset-windows.webp', pos: 'center top' },
+  { label: 'This Fall / Winter', emoji: '🍂', img: '/images/first-dance-colorful-led.webp', pos: 'center' },
   { label: 'Spring / Summer 2027', emoji: '🌸', img: '/images/couple-dock-waterfront-golden-hour.webp', pos: 'center' },
   { label: 'Fall / Winter 2027', emoji: '❄️', img: '/images/reception-decor-purple-cherry-blossoms.webp', pos: 'center top' },
   { label: '2028', emoji: '📅', img: '/images/couple-fountain-night-dramatic.webp', pos: 'center' },
@@ -50,7 +50,7 @@ export default function S2_WeddingDate() {
               transition={{ delay: 0.1 + i * 0.04 }}
               onClick={() => handleSelect(opt.label)}
               className={`
-                overflow-hidden rounded-2xl border-2 text-left
+                overflow-hidden rounded-2xl border-2 text-left flex flex-col
                 active:scale-[0.97] transition-all
                 ${answers.weddingDate === opt.label
                   ? 'border-blue shadow-md'
@@ -59,7 +59,7 @@ export default function S2_WeddingDate() {
               `}
             >
               <img src={opt.img} alt={opt.label} className="w-full aspect-[5/3] object-cover" style={{ objectPosition: opt.pos }} />
-              <div className="p-3 bg-white">
+              <div className="p-3 bg-white flex-1 flex items-center">
                 <p className="font-semibold text-sm text-black">
                   {opt.emoji} {opt.label}
                 </p>

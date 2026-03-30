@@ -28,6 +28,7 @@ const quizImages = [
   // Wedding date + timeline
   '/images/outdoor-waterfront-ceremony-aisle.webp',
   '/images/first-dance-sunset-windows.webp',
+  '/images/first-dance-colorful-led.webp',
   '/images/couple-dock-waterfront-golden-hour.webp',
   '/images/reception-decor-purple-cherry-blossoms.webp',
   '/images/couple-entrance-sunglasses-fun.webp',
@@ -79,7 +80,7 @@ export default function FunnelContainer() {
     <div className="relative h-[100dvh] w-full overflow-hidden bg-white">
       <ProgressBar />
       <BackButton />
-      <AnimatePresence mode="wait" custom={direction}>
+      <AnimatePresence mode="popLayout">
         <CurrentScreen key={currentStep} />
       </AnimatePresence>
     </div>
