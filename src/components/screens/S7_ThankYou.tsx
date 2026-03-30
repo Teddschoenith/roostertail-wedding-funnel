@@ -48,58 +48,33 @@ export default function S7_ThankYou() {
       {showConfetti && <Confetti />}
 
       <div className="flex flex-col items-center justify-center min-h-[100dvh] px-6 py-12 bg-white">
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ type: 'spring', stiffness: 200, damping: 15, delay: 0.2 }}
-          className="w-20 h-20 rounded-full bg-light-gray flex items-center justify-center mb-6"
-        >
+        <div className="w-20 h-20 rounded-full bg-light-gray flex items-center justify-center mb-6">
           <span className="text-4xl">🎉</span>
-        </motion.div>
+        </div>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="font-display text-3xl font-bold text-black mb-3 text-center"
-        >
+        <h2 className="font-display text-3xl font-bold text-black mb-3 text-center">
           We can&apos;t wait to meet you
-        </motion.h2>
+        </h2>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="text-muted text-base leading-relaxed mb-10 text-center max-w-sm"
-        >
+        <p className="text-muted text-base leading-relaxed mb-10 text-center max-w-sm">
           {wantsTour
             ? "We got your tour request. One of our event coordinators will reach out within 24 hours to confirm your date."
             : "One of our event coordinators will personally reach out within 24 hours."
           }
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="flex flex-col gap-3 w-full max-w-sm"
-        >
+        <div className="flex flex-col gap-3 w-full max-w-sm">
           <a
             href="#"
             className="flex items-center justify-center gap-2 rounded-2xl bg-blue text-white px-6 py-4 font-semibold text-sm"
           >
             View wedding packages →
           </a>
-        </motion.div>
+        </div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.0 }}
-          className="text-muted text-xs mt-10"
-        >
+        <p className="text-muted text-xs mt-10">
           Detroit&apos;s waterfront event venue since 1958
-        </motion.p>
+        </p>
       </div>
     </SlideWrapper>
   )

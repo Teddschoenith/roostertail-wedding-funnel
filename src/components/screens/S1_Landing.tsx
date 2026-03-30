@@ -1,20 +1,10 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import SlideWrapper from '@/components/funnel/SlideWrapper'
 import { useFunnelStore } from '@/lib/funnel-store'
 import { getHeadlineVariant, getHeadline, type HeadlineVariant } from '@/lib/ab-test'
 import FAQ from '@/components/funnel/FAQ'
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 15 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.06, duration: 0.3, ease: 'easeOut' as const },
-  }),
-}
 
 /* Google-style detailed star SVG */
 function StarIcon({ size = 20, className = '' }: { size?: number; className?: string }) {
@@ -70,61 +60,50 @@ export default function S1_Landing() {
     <SlideWrapper>
       {/* ===== HERO ===== */}
       <section className="min-h-[100dvh] flex flex-col justify-center px-6 py-12 bg-white">
-        <motion.p
-          custom={0} variants={fadeUp} initial="hidden" animate="visible"
-          className="text-accent text-xs font-semibold tracking-widest uppercase mb-4 text-center"
-        >
+        <p className="text-accent text-xs font-semibold tracking-widest uppercase mb-4 text-center">
           Detroit&apos;s Waterfront Venue &middot; Est. 1958
-        </motion.p>
+        </p>
 
-        <motion.h1
-          custom={1} variants={fadeUp} initial="hidden" animate="visible"
-          className="font-display text-[2rem] leading-[1.15] font-bold text-black mb-6 text-center"
-        >
+        <h1 className="font-display text-[2rem] leading-[1.15] font-bold text-black mb-6 text-center">
           {getHeadline(variant)}
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          custom={2} variants={fadeUp} initial="hidden" animate="visible"
-          className="text-black font-semibold text-lg mb-4 text-center"
-        >
+        <p className="text-black font-semibold text-lg mb-4 text-center">
           Have you ever been to a Roostertail wedding?
-        </motion.p>
+        </p>
 
-        <motion.div custom={3} variants={fadeUp} initial="hidden" animate="visible">
-          <div className="flex gap-3">
-            {[
-              { label: 'Yes!', img: '/images/champagne-tower-bride-pouring.webp' },
-              { label: 'Not yet', img: '/images/couple-dock-waterfront-golden-hour.webp' },
-            ].map((opt) => (
-              <button
-                key={opt.label}
-                onClick={() => {
-                  setBeenBefore(opt.label)
-                  setAnswer('beenBefore', opt.label)
-                  setTimeout(goNext, 400)
-                }}
-                className={`
-                  flex-1 overflow-hidden rounded-2xl
-                  active:scale-[0.97] transition-all
-                  ${beenBefore === opt.label
-                    ? 'ring-3 ring-blue ring-offset-2 shadow-lg'
-                    : 'shadow-sm'
-                  }
-                `}
-              >
-                <img
-                  src={opt.img}
-                  alt={opt.label}
-                  className="w-full aspect-[3/4] object-cover"
-                />
-                <div className="py-3 px-3 text-center font-bold text-base bg-blue text-white">
-                  {opt.label}
-                </div>
-              </button>
-            ))}
-          </div>
-        </motion.div>
+        <div className="flex gap-3">
+          {[
+            { label: 'Yes!', img: '/images/champagne-tower-bride-pouring.webp' },
+            { label: 'Not yet', img: '/images/couple-dock-waterfront-golden-hour.webp' },
+          ].map((opt) => (
+            <button
+              key={opt.label}
+              onClick={() => {
+                setBeenBefore(opt.label)
+                setAnswer('beenBefore', opt.label)
+                setTimeout(goNext, 400)
+              }}
+              className={`
+                flex-1 overflow-hidden rounded-2xl
+                active:scale-[0.97] transition-all
+                ${beenBefore === opt.label
+                  ? 'ring-3 ring-blue ring-offset-2 shadow-lg'
+                  : 'shadow-sm'
+                }
+              `}
+            >
+              <img
+                src={opt.img}
+                alt={opt.label}
+                className="w-full aspect-[3/4] object-cover"
+              />
+              <div className="py-3 px-3 text-center font-bold text-base bg-blue text-white">
+                {opt.label}
+              </div>
+            </button>
+          ))}
+        </div>
       </section>
 
       {/* ===== SOCIAL PROOF BAR ===== */}

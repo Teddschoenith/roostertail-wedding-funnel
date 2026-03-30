@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import SlideWrapper from '@/components/funnel/SlideWrapper'
 import { useFunnelStore } from '@/lib/funnel-store'
 
@@ -22,30 +21,17 @@ export default function S3_GuestCount() {
   return (
     <SlideWrapper>
       <div className="flex flex-col justify-center min-h-[100dvh] px-6 pt-16 pb-12 bg-white">
-        <motion.h2
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="font-display text-3xl font-bold text-black mb-2"
-        >
+        <h2 className="font-display text-3xl font-bold text-black mb-2">
           How big is the party?
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className="text-muted text-sm mb-8"
-        >
+        </h2>
+        <p className="text-muted text-sm mb-8">
           Helps us recommend the right setup
-        </motion.p>
+        </p>
 
         <div className="grid grid-cols-2 gap-3">
-          {options.map((opt, i) => (
-            <motion.button
+          {options.map((opt) => (
+            <button
               key={opt.label}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 + i * 0.04 }}
               onClick={() => handleSelect(opt.label)}
               className={`
                 overflow-hidden rounded-2xl border-2 text-left
@@ -62,7 +48,7 @@ export default function S3_GuestCount() {
                   {opt.icon} {opt.label}
                 </p>
               </div>
-            </motion.button>
+            </button>
           ))}
         </div>
       </div>

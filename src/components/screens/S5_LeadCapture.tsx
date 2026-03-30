@@ -104,36 +104,22 @@ export default function S5_LeadCapture() {
             /* ===== ROLE SELECTOR — IMAGE CARDS ===== */
             <motion.div
               key="role-picker"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0, x: -40 }}
-              transition={{ duration: 0.3 }}
+              initial={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.15 }}
             >
-              <motion.h2
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="font-display text-3xl font-bold text-black mb-2 text-center"
-              >
+              <h2 className="font-display text-3xl font-bold text-black mb-2 text-center">
                 What role do you play?
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-muted text-sm mb-6 text-center"
-              >
+              </h2>
+              <p className="text-muted text-sm mb-6 text-center">
                 Helps us personalize your experience
-              </motion.p>
+              </p>
 
               {/* Top row — 2 big cards: Bride + Groom */}
               <div className="grid grid-cols-2 gap-3 mb-3">
-                {roles.slice(0, 2).map((role, i) => (
-                  <motion.button
+                {roles.slice(0, 2).map((role) => (
+                  <button
                     key={role.label}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 + i * 0.04 }}
                     onClick={() => {
                       setSelectedRole(role.label)
                       setAnswer('role', role.label)
@@ -148,18 +134,15 @@ export default function S5_LeadCapture() {
                     <div className="py-3 px-3 text-center font-bold text-sm bg-blue text-white">
                       {role.label}
                     </div>
-                  </motion.button>
+                  </button>
                 ))}
               </div>
 
               {/* Bottom row — 3 cards: Planner, Mother, Other */}
               <div className="grid grid-cols-3 gap-3">
-                {roles.slice(2).map((role, i) => (
-                  <motion.button
+                {roles.slice(2).map((role) => (
+                  <button
                     key={role.label}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.15 + i * 0.04 }}
                     onClick={() => {
                       setSelectedRole(role.label)
                       setAnswer('role', role.label)
@@ -176,7 +159,7 @@ export default function S5_LeadCapture() {
                     <div className="py-2.5 px-1 text-center font-bold text-xs text-white leading-tight flex-1 flex items-center justify-center">
                       {role.label}
                     </div>
-                  </motion.button>
+                  </button>
                 ))}
               </div>
             </motion.div>
@@ -187,24 +170,14 @@ export default function S5_LeadCapture() {
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }}
             >
-              <motion.h2
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="font-display text-3xl font-bold text-black mb-2"
-              >
+              <h2 className="font-display text-3xl font-bold text-black mb-2">
                 Let&apos;s put something together for you
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-muted text-sm mb-6"
-              >
+              </h2>
+              <p className="text-muted text-sm mb-6">
                 Our events team will personally reach out within 24 hours.
-              </motion.p>
+              </p>
 
               <button
                 onClick={() => setSelectedRole(null)}

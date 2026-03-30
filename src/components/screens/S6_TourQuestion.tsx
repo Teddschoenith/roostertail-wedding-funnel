@@ -6,7 +6,7 @@ import SlideWrapper from '@/components/funnel/SlideWrapper'
 import { useFunnelStore } from '@/lib/funnel-store'
 
 export default function S6_TourQuestion() {
-  const { setAnswer, goNext, goToStep } = useFunnelStore()
+  const { setAnswer, goNext } = useFunnelStore()
   const [wantsTour, setWantsTour] = useState<string | null>(null)
   const [tourDate, setTourDate] = useState('')
   const [submitted, setSubmitted] = useState(false)
@@ -14,7 +14,6 @@ export default function S6_TourQuestion() {
   const handleNo = () => {
     setWantsTour('no')
     setAnswer('wantsTour', 'no')
-    // Skip to thank you (step 7 — the "we'll reach out" version)
     setTimeout(() => goNext(), 400)
   }
 
@@ -38,33 +37,19 @@ export default function S6_TourQuestion() {
             /* ===== YES / NO CARDS ===== */
             <motion.div
               key="tour-ask"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0, x: -40 }}
-              transition={{ duration: 0.3 }}
+              initial={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.15 }}
             >
-              <motion.h2
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="font-display text-3xl font-bold text-black mb-2 text-center"
-              >
+              <h2 className="font-display text-3xl font-bold text-black mb-2 text-center">
                 Want to come see it in person?
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-muted text-sm mb-6 text-center"
-              >
+              </h2>
+              <p className="text-muted text-sm mb-6 text-center">
                 We&apos;d love to show you around
-              </motion.p>
+              </p>
 
               <div className="grid grid-cols-2 gap-3">
-                <motion.button
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
+                <button
                   onClick={handleYes}
                   className="overflow-hidden rounded-2xl shadow-sm active:scale-[0.97] transition-all flex flex-col"
                 >
@@ -76,11 +61,8 @@ export default function S6_TourQuestion() {
                   <div className="py-3 px-3 text-center font-bold text-base bg-blue text-white flex-1 flex items-center justify-center">
                     Yes, let&apos;s tour!
                   </div>
-                </motion.button>
-                <motion.button
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
+                </button>
+                <button
                   onClick={handleNo}
                   className="overflow-hidden rounded-2xl shadow-sm active:scale-[0.97] transition-all flex flex-col"
                 >
@@ -92,7 +74,7 @@ export default function S6_TourQuestion() {
                   <div className="py-3 px-3 text-center font-bold text-base bg-blue text-white flex-1 flex items-center justify-center">
                     Not yet, just call me
                   </div>
-                </motion.button>
+                </button>
               </div>
             </motion.div>
           ) : wantsTour === 'yes' && !submitted ? (
@@ -101,18 +83,13 @@ export default function S6_TourQuestion() {
               key="tour-date"
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -40 }}
-              transition={{ duration: 0.3 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
               className="text-center"
             >
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-                className="w-16 h-16 rounded-full bg-light-gray flex items-center justify-center mb-6 mx-auto"
-              >
+              <div className="w-16 h-16 rounded-full bg-light-gray flex items-center justify-center mb-6 mx-auto">
                 <span className="text-3xl">📍</span>
-              </motion.div>
+              </div>
 
               <h2 className="font-display text-2xl font-bold text-black mb-2">
                 What&apos;s your preferred date?
@@ -144,6 +121,7 @@ export default function S6_TourQuestion() {
               key="tour-confirmed"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.2 }}
               className="text-center"
             >
               <span className="text-5xl block mb-4">✓</span>
