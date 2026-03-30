@@ -80,7 +80,7 @@ export default function FunnelContainer() {
     <div className="relative h-[100dvh] w-full overflow-hidden bg-white">
       <ProgressBar />
       <BackButton />
-      <AnimatePresence mode="popLayout">
+      <AnimatePresence>
         <CurrentScreen key={currentStep} />
       </AnimatePresence>
     </div>
