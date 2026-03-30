@@ -26,7 +26,7 @@ export default function S2_WeddingDate() {
         <h2 className="font-display text-3xl font-bold text-black mb-2">
           When do you want your wedding?
         </h2>
-        <p className="text-muted text-sm mb-8">
+        <p className="text-blue text-sm font-medium mb-8">
           Pick the closest option
         </p>
 
@@ -36,17 +36,17 @@ export default function S2_WeddingDate() {
               key={opt.label}
               onClick={() => handleSelect(opt.label)}
               className={`
-                overflow-hidden rounded-2xl border-2 text-left flex flex-col
+                overflow-hidden rounded-2xl text-left flex flex-col shadow-sm
                 active:scale-[0.97] transition-all
                 ${answers.weddingDate === opt.label
-                  ? 'border-blue shadow-md'
-                  : 'border-border'
+                  ? 'ring-2 ring-blue ring-offset-2 shadow-md'
+                  : ''
                 }
               `}
             >
               <img src={opt.img} alt={opt.label} className="w-full aspect-[5/3] object-cover" style={{ objectPosition: opt.pos }} />
-              <div className="p-3 bg-white flex-1 flex items-center">
-                <p className="font-semibold text-sm text-black">
+              <div className="py-3 px-3 bg-blue flex-1 flex items-center">
+                <p className="font-bold text-sm text-white">
                   {opt.emoji} {opt.label}
                 </p>
               </div>

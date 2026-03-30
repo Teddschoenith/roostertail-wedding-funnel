@@ -24,7 +24,7 @@ export default function S3_GuestCount() {
         <h2 className="font-display text-3xl font-bold text-black mb-2">
           How big is the party?
         </h2>
-        <p className="text-muted text-sm mb-8">
+        <p className="text-blue text-sm font-medium mb-8">
           Helps us recommend the right setup
         </p>
 
@@ -34,17 +34,17 @@ export default function S3_GuestCount() {
               key={opt.label}
               onClick={() => handleSelect(opt.label)}
               className={`
-                overflow-hidden rounded-2xl border-2 text-left
+                overflow-hidden rounded-2xl text-left shadow-sm
                 active:scale-[0.97] transition-all
                 ${answers.guestCount === opt.label
-                  ? 'border-blue shadow-md'
-                  : 'border-border'
+                  ? 'ring-2 ring-blue ring-offset-2 shadow-md'
+                  : ''
                 }
               `}
             >
               <img src={opt.img} alt={opt.label} className="w-full aspect-[16/10] object-cover" />
-              <div className="p-3 bg-white">
-                <p className="font-semibold text-sm text-black">
+              <div className="py-3 px-3 bg-blue">
+                <p className="font-bold text-sm text-white">
                   {opt.icon} {opt.label}
                 </p>
               </div>
