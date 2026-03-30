@@ -5,12 +5,12 @@ import SlideWrapper from '@/components/funnel/SlideWrapper'
 import { useFunnelStore } from '@/lib/funnel-store'
 
 const options = [
-  { label: 'This Spring / Summer', emoji: '☀️', img: '/images/outdoor-waterfront-ceremony-aisle.webp' },
-  { label: 'This Fall / Winter', emoji: '🍂', img: '/images/first-dance-sunset-windows.webp' },
-  { label: 'Spring / Summer 2027', emoji: '🌸', img: '/images/couple-dock-waterfront-golden-hour.webp' },
-  { label: 'Fall / Winter 2027', emoji: '❄️', img: '/images/reception-decor-purple-cherry-blossoms.webp' },
-  { label: '2028', emoji: '📅', img: '/images/couple-fountain-night-dramatic.webp' },
-  { label: '2029 or later', emoji: '💫', img: '/images/venue-exterior-night-fountains.webp' },
+  { label: 'This Spring / Summer', emoji: '☀️', img: '/images/outdoor-waterfront-ceremony-aisle.webp', pos: 'center' },
+  { label: 'This Fall / Winter', emoji: '🍂', img: '/images/first-dance-sunset-windows.webp', pos: 'center top' },
+  { label: 'Spring / Summer 2027', emoji: '🌸', img: '/images/couple-dock-waterfront-golden-hour.webp', pos: 'center' },
+  { label: 'Fall / Winter 2027', emoji: '❄️', img: '/images/reception-decor-purple-cherry-blossoms.webp', pos: 'center top' },
+  { label: '2028', emoji: '📅', img: '/images/couple-fountain-night-dramatic.webp', pos: 'center' },
+  { label: '2029 or later', emoji: '💫', img: '/images/venue-exterior-night-fountains.webp', pos: 'center' },
 ]
 
 export default function S2_WeddingDate() {
@@ -58,7 +58,7 @@ export default function S2_WeddingDate() {
                 }
               `}
             >
-              <img src={opt.img} alt={opt.label} className="w-full aspect-[4/3] object-cover" />
+              <img src={opt.img} alt={opt.label} className="w-full aspect-[5/3] object-cover" style={{ objectPosition: opt.pos }} />
               <div className="p-3 bg-white">
                 <p className="font-semibold text-sm text-black">
                   {opt.emoji} {opt.label}
