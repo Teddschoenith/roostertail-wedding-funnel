@@ -6,7 +6,7 @@ Mobile-first wedding lead generation funnel for **The Roostertail**, Detroit's w
 
 ## Target Audience
 
-Engaged couples in the Detroit metro area, 150+ guests, looking for an all-inclusive waterfront wedding venue.
+Engaged couples in the Detroit metro area, 150+ guests, looking for a streamlined waterfront wedding venue experience.
 
 ---
 
@@ -42,10 +42,12 @@ Engaged couples in the Detroit metro area, 150+ guests, looking for an all-inclu
 > "When are you getting married?"
 
 **Options:**
-- Spring/Summer 2026
-- Fall/Winter 2026
-- 2027
-- Still deciding
+- This Spring / Summer
+- This Fall / Winter
+- Spring / Summer 2027
+- Fall / Winter 2027
+- 2028
+- 2029 or later
 
 ---
 
@@ -55,7 +57,7 @@ Engaged couples in the Detroit metro area, 150+ guests, looking for an all-inclu
 
 **Options (multi-select):**
 - Waterfront views and sunsets
-- One price everything handled
+- Clear, streamlined pricing
 - A venue with history and character
 - Outdoor ceremony option
 
@@ -68,20 +70,20 @@ Engaged couples in the Detroit metro area, 150+ guests, looking for an all-inclu
 **Subtitle:** "We're designed to be the most stress-free wedding venue in Detroit. Three parts, no surprises."
 
 **Bucket 1: Ceremony Fee** — if applicable
-- Includes chairs, setup, rehearsal, aisleway, weather backup plan
+- Ceremony setup details and availability reviewed with our team based on package and event needs; weather backup plan included
 
 **Bucket 2: Per-Person Package** — starts at $139/pp
-- Includes plated or buffet dinner, open bar with bartenders, tax and gratuity — all in one number
+- Includes plated or buffet dinner, open bar with bartenders, tax and gratuity
 
 **Bucket 3: Venue Rental** — includes:
 - Tables, Chiavari chairs, linens, chargers
-- Dedicated event coordinator from booking to day-of
-- Full service staff setup and breakdown
-- Custom LED lighting
-- Complimentary parking for all guests
+- Venue coordinator
+- Professional service staff, setup and breakdown
+- Enhanced event lighting
+- On-site guest parking
 - Private restrooms, patio, and waterfront access
 
-**Footer text:** "And that's it! No hidden fees. No vendor spreadsheet. No parking headaches."
+**Footer text:** "Clear and straightforward."
 
 **CTA:** "Got it — let's keep going"
 

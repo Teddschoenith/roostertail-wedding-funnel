@@ -14,18 +14,18 @@ const buckets = [
   {
     title: 'Per-Person Package',
     subtitle: 'Starts at $139/pp',
-    items: ['Plated or buffet dinner', 'Open bar with bartenders', 'Tax and gratuity', 'All in one number'],
+    items: ['Plated or buffet dinner', 'Open bar with bartenders', 'Tax and gratuity'],
     icon: '🍽️',
   },
   {
     title: 'Venue Rental',
-    subtitle: 'Everything included',
+    subtitle: 'Included with your venue',
     items: [
       'Tables, Chiavari chairs, linens & chargers',
-      'Dedicated event coordinator',
-      'Full service staff, setup & breakdown',
-      'Custom LED lighting',
-      'Complimentary parking for all guests',
+      'Venue coordinator',
+      'Professional service staff, setup & breakdown',
+      'Enhanced event lighting',
+      'On-site guest parking',
       'Private patio & waterfront access',
     ],
     icon: '🏛️',
@@ -110,7 +110,7 @@ export default function S4_Pricing() {
           transition={{ delay: 2.4 }}
           className="text-center text-muted text-sm mb-6 font-medium"
         >
-          And that&apos;s it!
+          Clear and straightforward.
         </motion.p>
 
         <motion.button

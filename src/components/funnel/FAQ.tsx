@@ -6,27 +6,27 @@ import { motion, AnimatePresence } from 'framer-motion'
 const faqs = [
   {
     q: 'What is included in the per-person price?',
-    a: 'Everything. Plated or buffet dinner, full open bar with bartenders, tax, and gratuity. One number, no add-ons.',
+    a: 'The per-person package includes your meal service (plated or buffet), full open bar with bartenders, tax, and gratuity. Some events may also include additional venue or ceremony-related fees depending on the date, space, and setup.',
   },
   {
     q: 'Do I need to hire separate vendors for chairs, tables, or linens?',
-    a: 'No. Chiavari chairs, tables, linens, chargers, custom LED lighting, and a dedicated event coordinator are all included in the venue rental.',
+    a: 'No. Chiavari chairs, tables, linens, chargers, and event lighting are all included in the venue rental.',
   },
   {
     q: 'Is parking free for guests?',
-    a: 'Yes. Complimentary parking for all guests. No shuttles, no valet fees.',
+    a: 'Yes. Guests have access to convenient on-site self-parking at no additional cost.',
   },
   {
     q: 'Can I have my ceremony and reception at The Roostertail?',
-    a: 'Absolutely. We offer both indoor and outdoor ceremony options with a weather backup plan. Chairs, setup, rehearsal coordination, and aisleway are all included.',
+    a: 'Absolutely. We offer both indoor and outdoor ceremony options, plus a weather backup plan. Ceremony setup details and availability can be reviewed with our team based on your package and event needs.',
   },
   {
     q: 'How many guests can you accommodate?',
     a: 'We regularly host weddings from 100 to 400+ guests. Our team will recommend the right room configuration for your party size.',
   },
   {
-    q: 'What does the event coordinator do?',
-    a: 'Your dedicated coordinator handles everything from the day you book to the last dance. Floor plans, vendor timing, day-of logistics, and anything else that comes up.',
+    q: 'What does the venue coordinator do?',
+    a: 'Your venue coordinator helps with venue-related planning, timeline coordination, floor plans, and day-of venue logistics. They\u2019ll work with your vendor team to help keep the day running smoothly.',
   },
 ]
 

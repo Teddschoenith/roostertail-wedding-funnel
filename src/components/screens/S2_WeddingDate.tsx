@@ -9,6 +9,8 @@ const options = [
   { label: 'This Fall / Winter', emoji: '🍂', img: '/images/first-dance-sunset-windows.webp' },
   { label: 'Spring / Summer 2027', emoji: '🌸', img: '/images/couple-dock-waterfront-golden-hour.webp' },
   { label: 'Fall / Winter 2027', emoji: '❄️', img: '/images/reception-decor-purple-cherry-blossoms.webp' },
+  { label: '2028', emoji: '📅', img: '/images/couple-fountain-night-dramatic.webp' },
+  { label: '2029 or later', emoji: '💫', img: '/images/venue-exterior-night-fountains.webp' },
 ]
 
 export default function S2_WeddingDate() {

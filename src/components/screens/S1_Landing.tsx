@@ -147,7 +147,7 @@ export default function S1_Landing() {
           What can you expect from The Roostertail?
         </h2>
         <p className="text-muted text-sm mb-8">
-          Everything. That&apos;s the point.
+          More is included, so there&apos;s less to manage.
         </p>
 
         <div className="grid grid-cols-2 gap-3">
@@ -155,13 +155,13 @@ export default function S1_Landing() {
             { icon: '🍽️', title: 'Plated or buffet dinner', desc: 'Chef-prepared, your choice' },
             { icon: '🥂', title: 'Full open bar', desc: 'Premium spirits, bartenders included' },
             { icon: '🪑', title: 'Tables, chairs & linens', desc: 'Chiavari chairs, chargers, all of it' },
-            { icon: '👔', title: 'Full service staff', desc: 'Setup, service, and breakdown' },
-            { icon: '🎶', title: 'Custom LED lighting', desc: 'Set the mood, your colors' },
-            { icon: '🅿️', title: 'Free guest parking', desc: 'No shuttles, no stress' },
+            { icon: '👔', title: 'Professional service staff', desc: 'Venue setup, service, and breakdown' },
+            { icon: '🎶', title: 'Enhanced event lighting', desc: 'Lighting designed to complement the space' },
+            { icon: '🅿️', title: 'On-site guest parking', desc: 'Convenient self-parking included' },
             { icon: '🌅', title: 'Waterfront access', desc: 'Right on the Detroit River' },
             { icon: '🏡', title: 'Private patio', desc: 'Exclusive outdoor space for your guests' },
-            { icon: '📋', title: 'Dedicated coordinator', desc: 'From booking to last dance' },
-            { icon: '💍', title: 'Ceremony on-site', desc: 'Indoor or outdoor, weather backup included' },
+            { icon: '📋', title: 'Venue coordinator', desc: 'Your point person for venue planning and logistics' },
+            { icon: '💍', title: 'Ceremony on-site', desc: 'Indoor or outdoor options with weather backup' },
           ].map((item) => (
             <div key={item.title} className="bg-light-gray rounded-xl p-4">
               <span className="text-2xl mb-2 block">{item.icon}</span>
@@ -276,10 +276,10 @@ export default function S1_Landing() {
           Detroit&apos;s waterfront event venue since 1958
         </h2>
         <p className="text-muted text-sm leading-relaxed mb-4">
-          The Roostertail sits on the Detroit River with panoramic waterfront views that have hosted over 10,000 celebrations. We&apos;re not just a venue, we&apos;re a full-service wedding production team.
+          The Roostertail sits on the Detroit River with panoramic waterfront views that have hosted over 10,000 celebrations. We&apos;re not just a venue — we&apos;re a team that helps bring your day together.
         </p>
         <p className="text-muted text-sm leading-relaxed">
-          From the moment you book to the last song of the night, our dedicated coordinator and full staff handle every detail. That&apos;s why couples choose us. No surprises, just a great party.
+          Our venue coordinator and professional staff support you through the planning process and on the day itself. That&apos;s why couples choose us — a beautiful setting with a team behind it.
         </p>
       </section>
 
@@ -304,7 +304,7 @@ export default function S1_Landing() {
         </p>
 
         <h2 className="font-display text-2xl font-bold text-black mb-3">
-          One venue. One price.{'\n'}Nothing else to figure out.
+          One beautiful venue.{'\n'}A simpler way to plan.
         </h2>
         <p className="text-muted text-sm mb-6">
           Talk to one of our event coordinators and see if we&apos;re the right fit for your day.
