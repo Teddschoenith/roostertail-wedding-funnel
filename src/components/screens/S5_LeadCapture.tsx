@@ -57,7 +57,7 @@ export default function S5_LeadCapture() {
     },
   })
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = (data: FormData) => {
     setSubmitting(true)
     setAnswer('yourName', data.yourName)
     setAnswer('partnerName', data.partnerName)
@@ -78,18 +78,14 @@ export default function S5_LeadCapture() {
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
     }
 
-    try {
-      await fetch('/api/submit-lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      })
-      trackLeadSubmission(payload)
-    } catch {
-      // Fail silently
-    }
+    // Fire and forget — don't block the user waiting for the webhook
+    fetch('/api/submit-lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    }).catch(() => {})
+    trackLeadSubmission(payload)
 
-    setSubmitting(false)
     goNext()
   }
 
