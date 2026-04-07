@@ -65,7 +65,9 @@ export default function S7_ThankYou() {
 
         <div className="flex flex-col gap-3 w-full max-w-sm">
           <a
-            href="#"
+            href="/wedding-packages.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 rounded-2xl bg-blue text-white px-6 py-4 font-semibold text-sm"
           >
             View wedding packages →
