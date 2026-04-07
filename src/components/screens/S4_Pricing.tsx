@@ -6,7 +6,7 @@ import { useFunnelStore } from '@/lib/funnel-store'
 const buckets = [
   {
     title: 'Per-Person Package',
-    price: 'Starts at $139/pp',
+    price: 'Starts at $149/pp',
     subtitle: 'Food, beverage, tax & gratuity',
     items: ['Plated or buffet dinner', 'Open bar with bartenders', 'Tax and gratuity included'],
     icon: '🍽️',
@@ -27,7 +27,7 @@ const buckets = [
   },
   {
     title: 'Ceremony Fee',
-    price: '$2,500 – $3,500',
+    price: '$2,750 – $3,850',
     subtitle: 'If applicable — one-time set fee',
     items: ['Chairs & setup', 'Rehearsal coordination', 'Weather backup plan'],
     icon: '💍',

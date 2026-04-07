@@ -72,7 +72,7 @@ Engaged couples in the Detroit metro area, 150+ guests, looking for a streamline
 **Bucket 1: Ceremony Fee** — if applicable
 - Ceremony setup details and availability reviewed with our team based on package and event needs; weather backup plan included
 
-**Bucket 2: Per-Person Package** — starts at $139/pp
+**Bucket 2: Per-Person Package** — starts at $149/pp
 - Includes plated or buffet dinner, open bar with bartenders, tax and gratuity
 
 **Bucket 3: Venue Rental** — includes:
