@@ -14,7 +14,7 @@ export default function EventGuestCount({ config }: { config: EventConfig }) {
 
   return (
     <SlideWrapper>
-      <div className="flex flex-col justify-center min-h-[100dvh] px-6 pt-16 pb-12 bg-white stagger">
+      <div className="flex flex-col justify-center min-h-[100dvh] px-6 pt-16 pb-12 bg-white stagger md:max-w-[540px] md:mx-auto md:border-x md:border-border">
         <h2 className="font-display text-3xl font-bold text-black mb-2">
           {config.guestCountHeadline}
         </h2>

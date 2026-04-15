@@ -61,7 +61,7 @@ export default function EventFunnelContainer({ config }: Props) {
   if (!CurrentScreen) return null
 
   return (
-    <div className="relative h-[100dvh] w-full overflow-hidden bg-white funnel-screen">
+    <div className="relative h-[100dvh] w-full overflow-hidden bg-white">
       <EventProgressBar />
       <AnimatePresence>
         <CurrentScreen key={currentStep} config={config} />

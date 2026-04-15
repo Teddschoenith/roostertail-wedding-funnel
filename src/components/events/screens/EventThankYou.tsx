@@ -48,7 +48,7 @@ export default function EventThankYou({ config }: { config: EventConfig }) {
     <SlideWrapper>
       {showConfetti && <Confetti />}
 
-      <div className="flex flex-col items-center justify-center min-h-[100dvh] px-6 py-12 bg-white">
+      <div className="flex flex-col items-center justify-center min-h-[100dvh] px-6 py-12 bg-white md:max-w-[540px] md:mx-auto md:border-x md:border-border">
         <div className="w-20 h-20 rounded-full bg-light-gray flex items-center justify-center mb-6">
           <span className="text-4xl">🎉</span>
         </div>

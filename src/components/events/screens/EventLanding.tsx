@@ -39,143 +39,160 @@ export default function EventLanding({ config }: { config: EventConfig }) {
   return (
     <SlideWrapper>
       {/* HERO */}
-      <section className="min-h-[100dvh] flex flex-col justify-center px-6 py-12 bg-white">
-        <p className="text-accent text-xs font-semibold tracking-widest uppercase mb-4 text-center">
-          {config.heroTagline}
-        </p>
-        <h1 className="font-display text-[2rem] leading-[1.15] font-bold text-black mb-6 text-center">
-          {config.heroHeadline}
-        </h1>
-        <p className="text-black font-semibold text-lg mb-4 text-center">
-          {config.heroQuestion}
-        </p>
-        <div className="flex gap-3">
-          {config.heroOptions.map((opt) => (
-            <button
-              key={opt.label}
-              onClick={() => {
-                setBeenBefore(opt.label)
-                setAnswer('beenBefore', opt.label)
-                setTimeout(goNext, 400)
-              }}
-              className={`flex-1 overflow-hidden rounded-2xl active:scale-[0.97] transition-all ${beenBefore === opt.label ? 'ring-3 ring-blue ring-offset-2 shadow-lg' : 'shadow-sm'}`}
-            >
-              <img src={opt.img} alt={opt.label} className="w-full aspect-[3/4] object-cover" />
-              <div className="py-3 px-3 text-center font-bold text-base bg-blue text-white">
-                {opt.label}
-              </div>
-            </button>
-          ))}
+      <section className="min-h-[100dvh] md:[min-height:auto] flex flex-col justify-center px-6 py-12 md:py-20 bg-white">
+        <div className="md:max-w-3xl md:mx-auto md:w-full">
+          <p className="text-accent text-xs md:text-sm font-semibold tracking-widest uppercase mb-4 text-center">
+            {config.heroTagline}
+          </p>
+          <h1 className="font-display text-[2rem] md:text-5xl leading-[1.15] font-bold text-black mb-6 text-center">
+            {config.heroHeadline}
+          </h1>
+          <p className="text-black font-semibold text-lg mb-4 text-center">
+            {config.heroQuestion}
+          </p>
+          <div className="flex gap-3 md:gap-5 md:max-w-lg md:mx-auto">
+            {config.heroOptions.map((opt) => (
+              <button
+                key={opt.label}
+                onClick={() => {
+                  setBeenBefore(opt.label)
+                  setAnswer('beenBefore', opt.label)
+                  setTimeout(goNext, 400)
+                }}
+                className={`flex-1 overflow-hidden rounded-2xl hover:shadow-xl hover:scale-[1.02] active:scale-[0.97] transition-all ${beenBefore === opt.label ? 'ring-3 ring-blue ring-offset-2 shadow-lg' : 'shadow-sm md:shadow-md'}`}
+              >
+                <img src={opt.img} alt={opt.label} className="w-full aspect-[3/4] object-cover" />
+                <div className="py-3 px-3 text-center font-bold text-base bg-blue text-white">
+                  {opt.label}
+                </div>
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* SOCIAL PROOF */}
-      <section className="bg-light-gray py-10 px-6 text-center">
+      <section className="bg-light-gray py-10 md:py-14 px-6 text-center">
         <div className="flex justify-center mb-3">
           <FiveStars size={28} />
         </div>
-        <p className="text-black font-bold text-2xl mb-1">{config.socialProofText}</p>
-        <p className="text-muted text-sm mt-2">{config.socialProofSubtext}</p>
+        <p className="text-black font-bold text-2xl md:text-3xl mb-1">{config.socialProofText}</p>
+        <p className="text-muted text-sm md:text-base mt-2">{config.socialProofSubtext}</p>
       </section>
 
       {/* FEATURES */}
-      <section className="bg-white py-12 px-6">
-        <p className="text-accent text-xs font-semibold tracking-widest uppercase mb-3">What you get</p>
-        <h2 className="font-display text-2xl font-bold text-black mb-2">
-          What can you expect from The Roostertail?
-        </h2>
-        <p className="text-muted text-sm mb-8">More is included, so there&apos;s less to manage.</p>
-        <div className="grid grid-cols-2 gap-3">
-          {config.features.map((item) => (
-            <div key={item.title} className="bg-light-gray rounded-xl p-4">
-              <span className="text-2xl mb-2 block">{item.icon}</span>
-              <p className="font-semibold text-sm text-black">{item.title}</p>
-              <p className="text-muted text-xs mt-1">{item.desc}</p>
-            </div>
-          ))}
+      <section className="bg-white py-12 md:py-16 px-6">
+        <div className="md:max-w-5xl md:mx-auto">
+          <p className="text-accent text-xs font-semibold tracking-widest uppercase mb-3">What you get</p>
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-black mb-2">
+            What can you expect from The Roostertail?
+          </h2>
+          <p className="text-muted text-sm mb-8">More is included, so there&apos;s less to manage.</p>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+            {config.features.map((item) => (
+              <div key={item.title} className="bg-light-gray rounded-xl p-4">
+                <span className="text-2xl mb-2 block">{item.icon}</span>
+                <p className="font-semibold text-sm text-black">{item.title}</p>
+                <p className="text-muted text-xs mt-1">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="bg-light-gray py-12 px-6">
-        <p className="text-accent text-xs font-semibold tracking-widest uppercase mb-3">Real events</p>
-        <h2 className="font-display text-2xl font-bold text-black mb-8">What people love about us</h2>
-        <div className="flex flex-col gap-4">
-          {config.testimonials.map((t) => (
-            <div key={t.name} className="bg-white rounded-2xl overflow-hidden">
-              <img src={t.img} alt={t.name} className="w-full aspect-[16/9] object-cover" loading="lazy" />
-              <div className="p-5">
-                <div className="flex items-center mb-3"><FiveStars size={14} /></div>
-                <p className="text-black/80 text-sm italic leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
-                <p className="text-muted text-xs mt-3 font-semibold">{t.name}</p>
+      <section className="bg-light-gray py-12 md:py-16 px-6">
+        <div className="md:max-w-5xl md:mx-auto">
+          <p className="text-accent text-xs font-semibold tracking-widest uppercase mb-3">Real events</p>
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-black mb-8">What people love about us</h2>
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+            {config.testimonials.map((t) => (
+              <div key={t.name} className="bg-white rounded-2xl overflow-hidden md:flex-1">
+                <img src={t.img} alt={t.name} className="w-full aspect-[16/9] object-cover" loading="lazy" />
+                <div className="p-5">
+                  <div className="flex items-center mb-3"><FiveStars size={14} /></div>
+                  <p className="text-black/80 text-sm italic leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
+                  <p className="text-muted text-xs mt-3 font-semibold">{t.name}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="md:flex md:justify-center mt-8">
+            <button
+              onClick={goNext}
+              className="w-full md:w-auto md:px-16 rounded-2xl bg-blue py-4 text-white text-base font-semibold hover:bg-blue-dark active:scale-[0.97] transition-all"
+            >
+              Let&apos;s get you in touch with an event coordinator &rarr;
+            </button>
+          </div>
+          <p className="text-muted text-xs mt-3 text-center">Takes less than 60 seconds</p>
         </div>
-        <button
-          onClick={goNext}
-          className="w-full rounded-2xl bg-blue py-4 text-white text-base font-semibold active:scale-[0.97] transition-transform mt-8"
-        >
-          Let&apos;s get you in touch with an event coordinator &rarr;
-        </button>
-        <p className="text-muted text-xs mt-3 text-center">Takes less than 60 seconds</p>
       </section>
 
       {/* GALLERY */}
-      <section className="bg-white py-12 px-6">
-        <p className="text-accent text-xs font-semibold tracking-widest uppercase mb-3">See it for yourself</p>
-        <h2 className="font-display text-2xl font-bold text-black mb-6">Your venue, your vibe</h2>
-        <div className="grid grid-cols-3 gap-2">
-          {config.gallery.map((photo, i) => (
-            <img
-              key={photo.src}
-              src={photo.src}
-              alt={photo.alt}
-              className={`w-full object-cover rounded-xl ${i === 0 || i === 5 ? 'col-span-2 aspect-[2/1]' : 'aspect-square'}`}
-              loading="lazy"
-            />
-          ))}
+      <section className="bg-white py-12 md:py-16 px-6">
+        <div className="md:max-w-5xl md:mx-auto">
+          <p className="text-accent text-xs font-semibold tracking-widest uppercase mb-3">See it for yourself</p>
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-black mb-6">Your venue, your vibe</h2>
+          <div className="grid grid-cols-3 gap-2 md:gap-4">
+            {config.gallery.map((photo, i) => (
+              <img
+                key={photo.src}
+                src={photo.src}
+                alt={photo.alt}
+                className={`w-full object-cover rounded-xl md:rounded-2xl ${i === 0 || i === 5 ? 'col-span-2 aspect-[2/1]' : 'aspect-square'}`}
+                loading="lazy"
+              />
+            ))}
+          </div>
         </div>
       </section>
 
       {/* ABOUT */}
-      <section className="bg-light-gray py-12 px-6">
-        <div className="flex gap-4 mb-6">
-          {config.aboutImages.map((img, i) => (
-            <img key={img} src={img} alt="The Roostertail" className="w-1/2 rounded-2xl object-cover aspect-[3/4]" loading="lazy" />
-          ))}
+      <section className="bg-light-gray py-12 md:py-16 px-6">
+        <div className="md:max-w-5xl md:mx-auto md:flex md:gap-12 md:items-center">
+          <div className="flex gap-4 mb-6 md:mb-0 md:w-1/2 md:shrink-0">
+            {config.aboutImages.map((img) => (
+              <img key={img} src={img} alt="The Roostertail" className="w-1/2 rounded-2xl object-cover aspect-[3/4]" loading="lazy" />
+            ))}
+          </div>
+          <div>
+            <p className="text-accent text-xs font-semibold tracking-widest uppercase mb-3">About us</p>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-black mb-3">{config.aboutHeadline}</h2>
+            {config.aboutText.map((text, i) => (
+              <p key={i} className="text-muted text-sm md:text-base leading-relaxed mb-4">{text}</p>
+            ))}
+          </div>
         </div>
-        <p className="text-accent text-xs font-semibold tracking-widest uppercase mb-3">About us</p>
-        <h2 className="font-display text-2xl font-bold text-black mb-3">{config.aboutHeadline}</h2>
-        {config.aboutText.map((text, i) => (
-          <p key={i} className="text-muted text-sm leading-relaxed mb-4">{text}</p>
-        ))}
       </section>
 
       {/* FAQ */}
-      <section className="bg-white py-12 px-6">
-        <p className="text-accent text-xs font-semibold tracking-widest uppercase mb-3">Common questions</p>
-        <h2 className="font-display text-2xl font-bold text-black mb-6">Frequently Asked Questions</h2>
-        <EventFAQ items={config.faq} />
+      <section className="bg-white py-12 md:py-16 px-6">
+        <div className="md:max-w-2xl md:mx-auto">
+          <p className="text-accent text-xs font-semibold tracking-widest uppercase mb-3 md:text-center">Common questions</p>
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-black mb-6 md:text-center">Frequently Asked Questions</h2>
+          <EventFAQ items={config.faq} />
+        </div>
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-light-gray py-12 px-6 text-center">
-        <div className="flex justify-center mb-3"><FiveStars size={24} /></div>
-        <p className="text-muted text-xs font-medium mb-6">Detroit&apos;s waterfront event venue since 1958</p>
-        <h2 className="font-display text-2xl font-bold text-black mb-3">{config.ctaText}</h2>
-        <p className="text-muted text-sm mb-6">{config.ctaSubtext}</p>
-        <button
-          onClick={goNext}
-          className="w-full rounded-2xl bg-blue py-4 text-white text-base font-semibold active:scale-[0.97] transition-transform"
-        >
-          Let&apos;s get you in touch with an event coordinator &rarr;
-        </button>
+      <section className="bg-light-gray py-12 md:py-16 px-6 text-center">
+        <div className="md:max-w-2xl md:mx-auto">
+          <div className="flex justify-center mb-3"><FiveStars size={24} /></div>
+          <p className="text-muted text-xs font-medium mb-6">Detroit&apos;s waterfront event venue since 1958</p>
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-black mb-3">{config.ctaText}</h2>
+          <p className="text-muted text-sm mb-6">{config.ctaSubtext}</p>
+          <button
+            onClick={goNext}
+            className="w-full md:w-auto md:px-16 rounded-2xl bg-blue py-4 text-white text-base font-semibold hover:bg-blue-dark active:scale-[0.97] transition-all"
+          >
+            Let&apos;s get you in touch with an event coordinator &rarr;
+          </button>
+        </div>
       </section>
 
-      {/* FOOTER */}
       <footer className="bg-white py-6 px-6 text-center">
-        <p className="text-muted text-xs">The Roostertail &middot; Detroit&apos;s waterfront event venue since 1958</p>
+        <p className="text-muted text-xs">The Roostertail &middot; 100 Marquette Dr, Detroit, MI 48214</p>
       </footer>
     </SlideWrapper>
   )
