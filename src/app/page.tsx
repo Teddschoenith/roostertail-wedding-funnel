@@ -77,29 +77,26 @@ const faqs = [
 ]
 
 export default function Home() {
-  const pairedCards = eventTypeCards.slice(0, 6)
-  const lastCard = eventTypeCards[6]
-
   return (
-    <div className="bg-white">
+    <div className="bg-white homepage-container">
       {/* ===== HERO ===== */}
-      <section className="min-h-[100dvh] flex flex-col justify-center px-5 py-10">
+      <section className="min-h-[100dvh] flex flex-col justify-center px-5 py-10 md:py-16">
         <p className="text-accent text-xs font-semibold tracking-widest uppercase mb-3 text-center">
           Detroit&apos;s Waterfront Venue &middot; Est. 1958
         </p>
-        <h1 className="font-display text-[2rem] leading-[1.15] font-bold text-black mb-2 text-center">
+        <h1 className="font-display text-[2rem] md:text-4xl leading-[1.15] font-bold text-black mb-2 text-center">
           What type of event are you looking for?
         </h1>
         <p className="text-muted text-sm mb-6 text-center">
-          Tap to get started
+          Click to get started
         </p>
 
-        <div className="grid grid-cols-2 gap-3 stagger">
-          {pairedCards.map((card) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 stagger max-w-4xl mx-auto">
+          {eventTypeCards.map((card) => (
             <Link
               key={card.slug}
               href={`/${card.slug}`}
-              className="relative overflow-hidden rounded-2xl shadow-md active:scale-[0.97] transition-transform block"
+              className="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.02] active:scale-[0.97] transition-all block"
             >
               <img src={card.img} alt={card.label} className="w-full aspect-[3/4] object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -110,20 +107,6 @@ export default function Home() {
             </Link>
           ))}
         </div>
-
-        {lastCard && (
-          <Link
-            href={`/${lastCard.slug}`}
-            className="relative overflow-hidden rounded-2xl shadow-md active:scale-[0.97] transition-transform block mt-3"
-          >
-            <img src={lastCard.img} alt={lastCard.label} className="w-full aspect-[2/1] object-cover object-center" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-4">
-              <p className="text-white font-bold text-base leading-tight">{lastCard.label}</p>
-              <p className="text-white/70 text-xs leading-tight mt-0.5">{lastCard.desc}</p>
-            </div>
-          </Link>
-        )}
       </section>
 
       {/* ===== SOCIAL PROOF BAR ===== */}
@@ -149,7 +132,7 @@ export default function Home() {
           More is included, so there&apos;s less to manage.
         </p>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {[
             { icon: '🍽️', title: 'Full catering service', desc: 'Chef-prepared menus for every taste' },
             { icon: '🥂', title: 'Full bar service', desc: 'Open bar, cash bar, or custom packages' },
@@ -180,7 +163,7 @@ export default function Home() {
           What people love about us
         </h2>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
           {testimonials.map((t) => (
             <div key={t.name} className="bg-white rounded-2xl overflow-hidden">
               <img src={t.img} alt={t.name} className="w-full aspect-[16/9] object-cover" loading="lazy" />
@@ -215,7 +198,7 @@ export default function Home() {
           Your venue, your vision
         </h2>
 
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-3 gap-2 md:gap-3">
           {gallery.map((photo, i) => (
             <img
               key={photo.src}
@@ -284,27 +267,16 @@ export default function Home() {
           Choose your event type and we&apos;ll connect you with a coordinator.
         </p>
 
-        <div className="flex flex-col gap-2">
-          {eventTypeCards.slice(0, 4).map((card) => (
+        <div className="flex flex-col gap-2 max-w-md mx-auto w-full">
+          {eventTypeCards.map((card) => (
             <Link
               key={card.slug}
               href={`/${card.slug}`}
-              className="w-full rounded-2xl bg-blue py-3.5 text-white text-sm font-semibold active:scale-[0.97] transition-transform block text-center"
+              className="w-full rounded-2xl bg-blue py-3.5 text-white text-sm font-semibold hover:bg-blue-dark active:scale-[0.97] transition-all block text-center"
             >
               {card.label} &rarr;
             </Link>
           ))}
-          <div className="grid grid-cols-3 gap-2">
-            {eventTypeCards.slice(4).map((card) => (
-              <Link
-                key={card.slug}
-                href={`/${card.slug}`}
-                className="rounded-xl bg-white border border-border py-3 text-black text-xs font-semibold active:scale-[0.97] transition-transform block text-center"
-              >
-                {card.label}
-              </Link>
-            ))}
-          </div>
         </div>
 
         <p className="text-muted text-xs mt-6">

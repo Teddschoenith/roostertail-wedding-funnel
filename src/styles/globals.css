@@ -70,3 +70,27 @@ html.funnel-active, html.funnel-active body {
 .stagger > *:nth-child(6) { animation-delay: 0.24s; }
 .stagger > *:nth-child(7) { animation-delay: 0.28s; }
 .stagger > *:nth-child(8) { animation-delay: 0.32s; }
+
+/* ─── Desktop responsive: constrain layouts ─── */
+@media (min-width: 768px) {
+  /* Funnel quiz screens: centered phone-width column */
+  .funnel-screen {
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+  }
+
+  /* Homepage sections: constrained width */
+  .homepage-container section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .homepage-container {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

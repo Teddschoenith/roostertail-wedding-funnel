@@ -82,7 +82,7 @@ export default function FunnelContainer() {
   const CurrentScreen = screens[currentStep].component
 
   return (
-    <div className="relative h-[100dvh] w-full overflow-hidden bg-white">
+    <div className="relative h-[100dvh] w-full overflow-hidden bg-white funnel-screen">
       <ProgressBar />
       <BackButton />
       <AnimatePresence>
