@@ -30,7 +30,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-html, body {
+/* Funnel pages apply overflow:hidden via their container class.
+   The hub/landing pages need normal body scroll. */
+html.funnel-active, html.funnel-active body {
   overflow: hidden;
   height: 100dvh;
 }

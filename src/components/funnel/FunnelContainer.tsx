@@ -62,6 +62,11 @@ export default function FunnelContainer() {
   const { currentStep, direction, setUTMParams } = useFunnelStore()
 
   useEffect(() => {
+    document.documentElement.classList.add('funnel-active')
+    return () => document.documentElement.classList.remove('funnel-active')
+  }, [])
+
+  useEffect(() => {
     setUTMParams(captureUTMParams())
     // Preload all quiz images in background
     quizImages.forEach((src) => {
