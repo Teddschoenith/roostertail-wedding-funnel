@@ -212,7 +212,7 @@ export async function upsertGHLContact(payload: Record<string, any>): Promise<{ 
     if (!response.ok) {
       const errorText = await response.text()
       console.error('GHL upsert failed:', response.status, errorText)
-      return { success: false, error: `ghl_${response.status}` }
+      return { success: false, error: `ghl_${response.status}: ${errorText.substring(0, 200)}` }
     }
 
     const data = await response.json()
