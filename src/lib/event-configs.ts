@@ -180,9 +180,10 @@ export const corporateConfig: EventConfig = {
     { key: 'cateringStyle', type: 'select', label: 'Catering preference', options: ['No Food', 'Plated Dinner', 'Buffet', 'Other'], required: false },
   ],
   roles: [
-    { label: 'Event Planner', img: '/images/roostertail-901_websize.webp' },
-    { label: 'Executive / Manager', img: '/images/roostertail-601_websize.webp' },
-    { label: 'Admin / Assistant', img: '/images/roostertail-649_websize.webp' },
+    { label: 'CEO / Owner', img: '/images/roostertail-601_websize.webp' },
+    { label: 'Manager', img: '/images/roostertail-901_websize.webp' },
+    { label: 'Employee / Admin', img: '/images/roostertail-649_websize.webp' },
+    { label: 'Event Planner', img: '/images/roostertail-930_websize.webp' },
     { label: 'Other', img: '/images/roostertail-486_websize.webp' },
   ],
   roleHeadline: 'What is your role?',
