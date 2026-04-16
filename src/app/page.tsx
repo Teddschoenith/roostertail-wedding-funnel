@@ -42,18 +42,18 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 const testimonials = [
   {
-    quote: "our company holiday party was the best one we have ever had. the waterfront views, the food, the service. our employees are still raving about it.",
-    name: 'Michigan Manufacturing Co.',
+    quote: "Another spectacular Echo Global Logistics holiday party. The Roostertail created a magical evening for us. Nicole and her team treated us all like royalty.",
+    name: 'Suzanne Parrish, Echo Global Logistics',
     img: '/images/roostertail-204_websize.webp',
   },
   {
-    quote: "the venue was the talk of the school for weeks. students felt like celebrities walking in. the staircase, the waterfront, the lighting. absolutely worth it.",
-    name: 'Grosse Pointe High School',
+    quote: "Walled Lake Western High School held their senior prom at The Roostertail. The venue is absolutely gorgeous and the students deemed it Instagram-worthy.",
+    name: 'Jessica Sanchez, Walled Lake Western High School',
     img: '/images/events/dsc03447.webp',
   },
   {
-    quote: "my husband's 50th birthday party was absolutely perfect. the views, the food, the dance floor. it felt like a real celebration.",
-    name: 'Sandra M.',
+    quote: "Thanks for an amazing 50th birthday party. It was excellence from start to finish. The team was so attentive, ensuring everything went smoothly.",
+    name: 'Tamaka Butler',
     img: '/images/events/dsc03553.webp',
   },
 ]
@@ -73,7 +73,7 @@ const faqs = [
   { q: 'What is included?', a: 'Every event includes on-site parking, a dedicated event coordinator, professional service staff, tables, chairs, linens, and full setup and breakdown.' },
   { q: 'Do you provide catering?', a: 'Yes. We offer plated dinners, buffet service, cocktail receptions, and brunch packages. Our chef can customize menus to your preferences and dietary needs.' },
   { q: 'How far in advance should we book?', a: 'We recommend 2-6 months in advance. Holiday dates and weekends fill up faster, so the earlier the better for those.' },
-  { q: 'Can we bring our own entertainment?', a: 'Yes! Bring your own DJ, band, or performers. Our venue has a professional sound system ready to use. We can also connect you with preferred vendors.' },
+  { q: 'Can we bring our own DJ?', a: 'Yes! You can bring your own DJ or band. Our venue has a professional sound system ready to use. We can also connect you with preferred vendors.' },
 ]
 
 export default function Home() {

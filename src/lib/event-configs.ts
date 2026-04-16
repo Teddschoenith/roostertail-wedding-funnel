@@ -117,18 +117,18 @@ export const corporateConfig: EventConfig = {
   ],
   testimonials: [
     {
-      quote: "our annual gala at the roostertail was flawless. the team handled everything from av setup to plated dinners for 300 people. our board was beyond impressed.",
-      name: 'Detroit Chamber of Commerce',
+      quote: "our event was held in the stunning Marine Room at sunset, and the backdrop of the Detroit River added a touch of magic to our evening. Nicole Spicuzza and the entire team exceeded our expectations in every way.",
+      name: 'Priscilla Perkins, Accounting Aid Society',
       img: '/images/roostertail-601_websize.webp',
     },
     {
-      quote: "we needed a space that felt impressive but still had that detroit character. the roostertail delivered on both. the waterfront views sealed the deal for our client event.",
-      name: 'Regional Marketing Agency',
+      quote: "We selected the Roostertail to host a corporate event for about 230 people. From day one to day of, the staff was top notch. The food is amazing, every detail was thought out. If you are wondering whether to book the Roostertail, do it. Trust me.",
+      name: 'Jennifer Pepperell',
       img: '/images/roostertail-901_websize.webp',
     },
     {
-      quote: "from the food to the service to the views, everything was top-notch. our team is still talking about it months later. already planning next year.",
-      name: 'Local Tech Company',
+      quote: "We were treated so very well. What a beautiful facility. Everyone was the epitome of professionalism, and everyone was so friendly and helpful. Successful things only happen due to great leadership and teamwork. You have all of that.",
+      name: 'Dave Boze, Stardusters Big Band',
       img: '/images/roostertail-649_websize.webp',
     },
   ],
@@ -227,18 +227,18 @@ export const holidayConfig: EventConfig = {
   ],
   testimonials: [
     {
-      quote: "our company holiday party was the best one we have ever had. the waterfront views, the food, the service. our employees are still raving about it.",
-      name: 'Michigan Manufacturing Co.',
+      quote: "Another spectacular Echo Global Logistics holiday party. The Roostertail created a magical evening for us. It was decorated beautifully, a Winter Wonderland with special touches around every corner. Nicole and her team treated us all like royalty.",
+      name: 'Suzanne Parrish, Echo Global Logistics',
       img: '/images/holiday-roostertail-486_websize.webp',
     },
     {
-      quote: "we wanted something special for our team of 200 and the roostertail delivered. the space was gorgeous, the staff was incredible, and our people had a blast.",
-      name: 'Detroit Tech Startup',
+      quote: "We recently hosted The Masonic Temple Detroit's holiday party at the Roostertail, and it was truly unforgettable. The staff went above and beyond to make our entire team feel spoiled and celebrated all night long.",
+      name: 'Erin Miracle, Masonic Temple Detroit',
       img: '/images/holiday-roostertail-934_websize.webp',
     },
     {
-      quote: "the dance floor, the cocktails by the water. it felt like a real celebration, not just another office party. booking again next year.",
-      name: 'Regional Law Firm',
+      quote: "We had our corporate holiday party at the Roostertail and they were amazing. Nicole and the staff were courteous and on top of everything all night. Every employee complimented what a great venue it was.",
+      name: 'Danielle Roland',
       img: '/images/holiday-roostertail-930_websize.webp',
     },
   ],
@@ -334,18 +334,18 @@ export const promConfig: EventConfig = {
   ],
   testimonials: [
     {
-      quote: "our students could not stop talking about prom. the venue was incredible, the dance floor was amazing, and the waterfront photos were everything. best prom we have ever hosted.",
-      name: 'Grosse Pointe High School',
+      quote: "Walled Lake Western High School held their senior prom at The Roostertail. The venue is absolutely gorgeous and the students deemed it Instagram-worthy. The students loved the balcony and floor-to-ceiling windows looking over the Detroit River.",
+      name: 'Jessica Sanchez, Walled Lake Western High School',
       img: '/images/events/dsc03447.webp',
     },
     {
-      quote: "as a prom committee advisor, i was worried about logistics. the roostertail team made it so easy. they handled the setup, the food, the security. we just showed up and had fun.",
-      name: 'Detroit Academy',
+      quote: "We hosted our In the Clouds Prom at the Roostertail. From start to finish, Nicole worked with our staff every step of the way. The food, snacks, and desserts were talked about by all the students well after prom was over.",
+      name: 'Kendra Spurgeon, Class of 2024',
       img: '/images/roostertail-934_websize.webp',
     },
     {
-      quote: "the venue was the talk of the school for weeks. students felt like celebrities walking in. the staircase, the waterfront, the lighting. absolutely worth it.",
-      name: 'Birmingham High School',
+      quote: "Nicole and the Roostertail staff made our event flawless from setup to closing out the night. The space was designed perfectly for our group size. The event was simply beautiful. I got so many compliments on how great it turned out.",
+      name: 'Conicka T., Graduation Committee',
       img: '/images/roostertail-447_websize.webp',
     },
   ],
@@ -442,18 +442,18 @@ export const birthdayConfig: EventConfig = {
   ],
   testimonials: [
     {
-      quote: "my husband's 50th birthday party was absolutely perfect. the views, the food, the dance floor. it felt like a real celebration. he said it was the best night of his life.",
-      name: 'Sandra M.',
+      quote: "Thanks for an amazing 50th birthday party. It was excellence from start to finish. The venue looked amazing and the team was so attentive, ensuring everything went smoothly. They added so many extra surprises with no additional charge.",
+      name: 'Tamaka Butler',
       img: '/images/events/dsc03553.webp',
     },
     {
-      quote: "we hosted our daughter's sweet 16 here and it was magical. she felt like a princess. the staff went above and beyond to make her night special.",
-      name: 'The Johnson Family',
+      quote: "Jayla's Sweet 16 was looking so elegant and relaxing with ravishing lighting and room decoration. You made her Sweet 16 unforgettable with your creative skills and faultless arranging abilities.",
+      name: 'Stacey and Jayla Scott',
       img: '/images/events/greetingcardconferenceevent-294.webp',
     },
     {
-      quote: "threw my 30th birthday here and it was everything i wanted. the waterfront at sunset, great food, and a dance floor that was packed all night.",
-      name: 'Marcus T.',
+      quote: "My husband had his 50th birthday party there and it was absolutely amazing. Shawna Eaton-Peplinski is the best. She took care of everything for us. The food was amazing. Everything was perfect.",
+      name: 'Sheimika Hardaway',
       img: '/images/roostertail-509_websize.webp',
     },
   ],
@@ -549,18 +549,18 @@ export const showerConfig: EventConfig = {
   ],
   testimonials: [
     {
-      quote: "my bridal shower at the roostertail was absolutely dreamy. the natural light through those big windows, the waterfront view, and the food was incredible. my bridesmaids nailed it.",
-      name: 'Jessica R.',
+      quote: "We cannot begin to thank the team enough for giving us the most perfect bridal shower experience. Nicole insured our shower was everything we envisioned and more. All of our guests were blown away with the venue and the team. 10 out of 10.",
+      name: 'Tyra Garcia-Garrison',
       img: '/images/events/dsc05521.webp',
     },
     {
-      quote: "we hosted a baby shower here for our daughter and it was perfect. the space was elegant without being stuffy, the brunch was delicious, and the photos came out beautifully.",
-      name: 'The Garcia Family',
+      quote: "I worked with Nicole and secured the Club Room for my baby shower. The decor they provided was absolutely beautiful. I highly suggest the Club Room for an intimate space with gorgeous sunlit views. The food was incredible.",
+      name: 'Rand S.',
       img: '/images/events/elegant-place-setting-emerald-table-runner-overhead.webp',
     },
     {
-      quote: "finding a shower venue in detroit that is actually pretty and not just a banquet hall is hard. the roostertail was exactly what we wanted. elegant, clean, and the views are unreal.",
-      name: 'Megan & Friends',
+      quote: "Great place to have an event. I recommend anyone in Detroit who wants to have a bridal shower, baby shower, or dinner to have it at the Roostertail. Great people, and Nicole helped out a lot.",
+      name: 'Shaquita Davenport',
       img: '/images/events/dsc03600.webp',
     },
   ],
@@ -656,18 +656,18 @@ export const otherConfig: EventConfig = {
   ],
   testimonials: [
     {
-      quote: "we hosted our family reunion at the roostertail and it was perfect. the waterfront views, the great food, and enough space for everyone to enjoy. a day our family will never forget.",
-      name: 'The Williams Family',
+      quote: "My high school class just had their 30th reunion at the Roostertail and I cannot say enough wonderful things about the night. The decor was outstanding, the food top notch, and the views out of this world. They managed to out-do our prom.",
+      name: 'Danielle DeLuca-Pytell, Reunion Committee',
       img: '/images/events/roostertail-building-exterior-vintage-neon-sign-night.webp',
     },
     {
-      quote: "our fundraiser gala raised more money than ever before. the venue set the tone. when donors walked in and saw the waterfront and the ballroom, they knew it was going to be special.",
-      name: 'Detroit Community Foundation',
+      quote: "We celebrated our 50th Wedding Anniversary in the Club Room. We spoke with Shawna and told her our story. She embraced us, our family, and designed an evening we will never forget. Six children, 20 grandchildren, and 2 great grandchildren treated to an elegant atmosphere.",
+      name: 'Linda Pittiglio',
       img: '/images/events/ballroom-empty-setup-paper-lanterns-waterfront-golden-hour.webp',
     },
     {
-      quote: "hosted a retirement party for our beloved colleague and it was exactly what we wanted. elegant but warm, with great food and a beautiful setting by the water.",
-      name: 'Local Hospital Staff',
+      quote: "Working with Nicole and Shawna on our Cass Tech 50th high school reunion was absolutely wonderful. They have fantastic attention to detail. Our reunion gala will be talked about for years to come because the Roostertail delivered.",
+      name: 'Corlyss Jenkins, Cass Tech Reunion',
       img: '/images/events/temptations-motown-group-blue-suits-venue-entrance.webp',
     },
   ],
