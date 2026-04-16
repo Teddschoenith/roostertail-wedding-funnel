@@ -12,6 +12,8 @@ export async function POST(request: Request) {
     })
 
     // DEBUG: test a simple GET to check token access
+    let getTestStatus = 0
+    let getTestBody = ''
     try {
       const testRes = await fetch(`https://services.leadconnectorhq.com/locations/${process.env.GHL_LOCATION_ID}`, {
         headers: {
@@ -19,9 +21,9 @@ export async function POST(request: Request) {
           'Version': '2021-07-28',
         },
       })
-      const testText = await testRes.text()
-      console.log('GHL GET location test:', testRes.status, testText.substring(0, 150))
-    } catch (e) { console.error('GET test failed:', e) }
+      getTestStatus = testRes.status
+      getTestBody = (await testRes.text()).substring(0, 200)
+    } catch (e) { getTestBody = String(e).substring(0, 200) }
 
     // Primary: push to GoHighLevel
     const ghlResult = await upsertGHLContact(body)
@@ -50,6 +52,7 @@ export async function POST(request: Request) {
         hasLocationId: !!process.env.GHL_LOCATION_ID,
         ghlSuccess: ghlResult.success,
         ghlError: ghlResult.error,
+        getTest: { status: getTestStatus, body: getTestBody },
       },
     })
   } catch (error) {
