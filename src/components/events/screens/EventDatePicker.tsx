@@ -28,12 +28,20 @@ export default function EventDatePicker({ config }: { config: EventConfig }) {
     : 31
 
   const handleSubmit = () => {
+    // Accept partial dates - build the most complete string we can
+    let dateStr = 'Flexible'
     if (month && day && year) {
-      const dateStr = `${months[parseInt(month)]} ${day}, ${year}`
-      setAnswer('preferredDate', dateStr)
-    } else {
-      setAnswer('preferredDate', 'Flexible')
+      dateStr = `${months[parseInt(month)]} ${day}, ${year}`
+    } else if (month && year) {
+      dateStr = `${months[parseInt(month)]} ${year}`
+    } else if (day && year) {
+      dateStr = `Day ${day}, ${year}`
+    } else if (year) {
+      dateStr = String(year)
+    } else if (month) {
+      dateStr = months[parseInt(month)]
     }
+    setAnswer('preferredDate', dateStr)
     goNext()
   }
 
@@ -41,7 +49,7 @@ export default function EventDatePicker({ config }: { config: EventConfig }) {
 
   return (
     <SlideWrapper>
-      <div className="flex flex-col justify-center min-h-[100dvh] px-6 pb-12 bg-white md:max-w-[540px] md:mx-auto md:border-x md:border-border">
+      <div className="flex flex-col justify-center min-h-[100dvh] px-6 pb-12 bg-white md:max-w-xl md:mx-auto md:w-full">
         <h2 className="font-display text-3xl font-bold text-black mb-2 text-center">
           Do you have a date in mind?
         </h2>
