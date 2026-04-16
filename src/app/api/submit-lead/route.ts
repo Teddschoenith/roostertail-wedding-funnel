@@ -29,7 +29,17 @@ export async function POST(request: Request) {
     }
 
     // Always return success to never block the funnel UX
-    return NextResponse.json({ success: true, contactId: ghlResult.contactId })
+    // TEMP: include debug info to diagnose production
+    return NextResponse.json({
+      success: true,
+      contactId: ghlResult.contactId,
+      _debug: {
+        hasApiKey: !!process.env.GHL_API_KEY,
+        hasLocationId: !!process.env.GHL_LOCATION_ID,
+        ghlSuccess: ghlResult.success,
+        ghlError: ghlResult.error,
+      },
+    })
   } catch (error) {
     console.error('Lead submission error:', error)
     // Still return 200 so the funnel advances
