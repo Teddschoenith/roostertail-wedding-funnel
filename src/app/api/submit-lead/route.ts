@@ -11,6 +11,18 @@ export async function POST(request: Request) {
       apiKeyLength: process.env.GHL_API_KEY?.length || 0,
     })
 
+    // DEBUG: test a simple GET to check token access
+    try {
+      const testRes = await fetch(`https://services.leadconnectorhq.com/locations/${process.env.GHL_LOCATION_ID}`, {
+        headers: {
+          'Authorization': `Bearer ${process.env.GHL_API_KEY}`,
+          'Version': '2021-07-28',
+        },
+      })
+      const testText = await testRes.text()
+      console.log('GHL GET location test:', testRes.status, testText.substring(0, 150))
+    } catch (e) { console.error('GET test failed:', e) }
+
     // Primary: push to GoHighLevel
     const ghlResult = await upsertGHLContact(body)
     console.log('GHL result:', ghlResult)
