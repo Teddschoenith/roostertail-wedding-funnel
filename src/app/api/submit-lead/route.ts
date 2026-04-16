@@ -5,9 +5,15 @@ export async function POST(request: Request) {
   try {
     const body = await request.json()
     console.log('Lead received:', body.eventSlug || 'wedding', body.email)
+    console.log('GHL env check:', {
+      hasApiKey: !!process.env.GHL_API_KEY,
+      hasLocationId: !!process.env.GHL_LOCATION_ID,
+      apiKeyLength: process.env.GHL_API_KEY?.length || 0,
+    })
 
     // Primary: push to GoHighLevel
     const ghlResult = await upsertGHLContact(body)
+    console.log('GHL result:', ghlResult)
     if (!ghlResult.success) {
       console.error('GHL upsert failed:', ghlResult.error)
     }
