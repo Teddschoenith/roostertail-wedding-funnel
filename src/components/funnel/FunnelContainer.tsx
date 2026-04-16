@@ -59,12 +59,14 @@ const screens = [
 ]
 
 export default function FunnelContainer() {
-  const { currentStep, direction, setUTMParams } = useFunnelStore()
+  const { currentStep, direction, setUTMParams, reset } = useFunnelStore()
 
   useEffect(() => {
+    // Reset funnel state on mount so state doesn't leak across funnels
+    reset()
     document.documentElement.classList.add('funnel-active')
     return () => document.documentElement.classList.remove('funnel-active')
-  }, [])
+  }, [reset])
 
   useEffect(() => {
     setUTMParams(captureUTMParams())

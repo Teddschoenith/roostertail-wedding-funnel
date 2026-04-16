@@ -32,6 +32,7 @@ interface FunnelState {
   goBack: () => void
   goToStep: (step: number) => void
   setUTMParams: (params: UTMParams) => void
+  reset: () => void
 }
 
 export const useFunnelStore = create<FunnelState>((set) => ({
@@ -65,4 +66,6 @@ export const useFunnelStore = create<FunnelState>((set) => ({
     })),
 
   setUTMParams: (params) => set({ utmParams: params }),
+
+  reset: () => set({ currentStep: 0, answers: {}, direction: 1 }),
 }))

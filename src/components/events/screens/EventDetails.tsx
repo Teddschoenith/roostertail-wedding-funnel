@@ -20,7 +20,7 @@ export default function EventDetails({ config }: { config: EventConfig }) {
 
   return (
     <SlideWrapper>
-      <div className="flex flex-col justify-center min-h-[100dvh] px-6 pt-16 pb-12 bg-white md:max-w-[540px] md:mx-auto md:border-x md:border-border">
+      <div className="flex flex-col justify-center min-h-[100dvh] px-6 pt-16 pb-12 bg-white md:max-w-xl md:mx-auto md:w-full">
         <h2 className="font-display text-3xl font-bold text-black mb-2">
           {config.detailsHeadline}
         </h2>
@@ -43,6 +43,18 @@ export default function EventDetails({ config }: { config: EventConfig }) {
                       <option key={opt} value={opt}>{opt}</option>
                     ))}
                   </select>
+                </div>
+              )
+            }
+            if (field.type === 'textarea') {
+              return (
+                <div key={field.key}>
+                  <textarea
+                    {...register(field.key, { required: field.required })}
+                    placeholder={field.placeholder || field.label}
+                    rows={3}
+                    className={`${inputClass} resize-none`}
+                  />
                 </div>
               )
             }

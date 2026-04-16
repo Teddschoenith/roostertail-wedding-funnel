@@ -19,7 +19,7 @@ interface Props {
 }
 
 export default function EventFunnelContainer({ config }: Props) {
-  const { currentStep, setUTMParams, setTotalSteps, setAnswer } = useEventFunnelStore()
+  const { currentStep, setUTMParams, setTotalSteps, setAnswer, reset } = useEventFunnelStore()
 
   const screens = [
     { component: EventLanding, name: 'landing' },
@@ -32,9 +32,11 @@ export default function EventFunnelContainer({ config }: Props) {
   ]
 
   useEffect(() => {
+    // Reset funnel state on mount so state doesn't leak between event types
+    reset()
     document.documentElement.classList.add('funnel-active')
     return () => document.documentElement.classList.remove('funnel-active')
-  }, [])
+  }, [config.slug, reset])
 
   useEffect(() => {
     setUTMParams(captureUTMParams())

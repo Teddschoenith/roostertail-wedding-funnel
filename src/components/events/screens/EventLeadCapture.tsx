@@ -11,6 +11,7 @@ interface FormData {
   yourName: string
   email: string
   phone: string
+  companyUrl: string
 }
 
 export default function EventLeadCapture({ config }: { config: EventConfig }) {
@@ -26,6 +27,7 @@ export default function EventLeadCapture({ config }: { config: EventConfig }) {
       yourName: (answers.yourName as string) || '',
       email: (answers.email as string) || '',
       phone: (answers.phone as string) || '',
+      companyUrl: (answers.companyUrl as string) || '',
     },
   })
 
@@ -34,6 +36,7 @@ export default function EventLeadCapture({ config }: { config: EventConfig }) {
     setAnswer('yourName', data.yourName)
     setAnswer('email', data.email)
     setAnswer('phone', data.phone)
+    if (data.companyUrl) setAnswer('companyUrl', data.companyUrl)
 
     const payload = {
       ...data,
@@ -67,7 +70,7 @@ export default function EventLeadCapture({ config }: { config: EventConfig }) {
 
   return (
     <SlideWrapper>
-      <div className="flex flex-col justify-center min-h-[100dvh] px-6 pb-12 bg-white md:max-w-[540px] md:mx-auto md:border-x md:border-border">
+      <div className="flex flex-col justify-center min-h-[100dvh] px-6 pb-12 bg-white md:max-w-xl md:mx-auto md:w-full">
         <h2 className="font-display text-3xl font-bold text-black mb-2">
           {config.formHeadline}
         </h2>
@@ -103,6 +106,17 @@ export default function EventLeadCapture({ config }: { config: EventConfig }) {
               className={inputClass}
             />
           </div>
+
+          {config.showCompanyUrl && (
+            <div>
+              <input
+                {...register('companyUrl')}
+                type="url"
+                placeholder="Company website (optional)"
+                className={inputClass}
+              />
+            </div>
+          )}
 
           <button
             type="submit"
