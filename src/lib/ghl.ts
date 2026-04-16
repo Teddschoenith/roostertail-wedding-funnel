@@ -205,6 +205,7 @@ export async function upsertGHLContact(payload: Record<string, any>): Promise<{ 
         'Authorization': `Bearer ${apiKey}`,
         'Version': '2021-07-28',
         'Content-Type': 'application/json',
+        'LocationId': locationId,
       },
       body: JSON.stringify(body),
     })
