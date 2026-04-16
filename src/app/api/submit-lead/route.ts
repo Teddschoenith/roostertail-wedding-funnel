@@ -23,7 +23,7 @@ export async function POST(request: Request) {
     }
 
     // Always return success to never block the funnel UX
-    return NextResponse.json({ success: true, contactId: ghlResult.contactId })
+    return NextResponse.json({ success: true, contactId: ghlResult.contactId, _err: ghlResult.error })
   } catch (error) {
     console.error('Lead submission error:', error)
     return NextResponse.json({ success: true, note: 'logged_with_error' })

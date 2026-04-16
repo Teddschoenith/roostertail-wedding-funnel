@@ -205,7 +205,8 @@ export async function upsertGHLContact(payload: Record<string, any>): Promise<{ 
         'Authorization': `Bearer ${apiKey}`,
         'Version': '2021-07-28',
         'Content-Type': 'application/json',
-        'LocationId': locationId,
+        'Accept': 'application/json',
+        'User-Agent': 'Roostertail-Funnel/1.0',
       },
       body: JSON.stringify(body),
     })
@@ -213,7 +214,7 @@ export async function upsertGHLContact(payload: Record<string, any>): Promise<{ 
     if (!response.ok) {
       const errorText = await response.text()
       console.error('GHL upsert failed:', response.status, errorText)
-      return { success: false, error: `ghl_${response.status}` }
+      return { success: false, error: `ghl_${response.status}: ${errorText.substring(0, 150)}` }
     }
 
     const data = await response.json()
