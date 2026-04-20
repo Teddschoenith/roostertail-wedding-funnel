@@ -22,6 +22,7 @@
           <td style="padding:12px 32px 20px; text-align:center;">
             <div style="font-size:30px; font-weight:800; color:#111111; letter-spacing:-0.5px; text-transform:uppercase;">Social event</div>
             <h1 style="margin:10px 0 0; font-size:20px; font-weight:600; color:#374151;">{{contact.first_name}} {{contact.last_name}}</h1>
+            <div style="color:#6b7280; font-size:13px; margin-top:4px;">{{contact.type_of_event}}</div>
           </td>
         </tr>
 
@@ -34,143 +35,112 @@
         <tr>
           <td style="padding:20px 32px;">
             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-              {{#if contact.name}}
               <tr>
                 <td style="padding:10px 0; border-bottom:1px solid #f3f4f6;">
-                  <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Name</div>
-                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.name}}</div>
+                  <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Event type</div>
+                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.type_of_event}}</div>
                 </td>
               </tr>
-              {{/if}}
-              {{#if contact.email}}
               <tr>
                 <td style="padding:10px 0; border-bottom:1px solid #f3f4f6;">
                   <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Email</div>
                   <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.email}}</div>
                 </td>
               </tr>
-              {{/if}}
-              {{#if contact.phone}}
               <tr>
                 <td style="padding:10px 0; border-bottom:1px solid #f3f4f6;">
                   <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Phone</div>
                   <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.phone}}</div>
                 </td>
               </tr>
-              {{/if}}
-              {{#if contact.custom_fields.role}}
               <tr>
                 <td style="padding:10px 0; border-bottom:1px solid #f3f4f6;">
                   <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Role</div>
-                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.custom_fields.role}}</div>
+                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.role}}</div>
                 </td>
               </tr>
-              {{/if}}
-              {{#if contact.custom_fields.type_of_event}}
-              <tr>
-                <td style="padding:10px 0; border-bottom:1px solid #f3f4f6;">
-                  <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Event type</div>
-                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.custom_fields.type_of_event}}</div>
-                </td>
-              </tr>
-              {{/if}}
-              {{#if contact.custom_fields.date_of_event}}
               <tr>
                 <td style="padding:10px 0; border-bottom:1px solid #f3f4f6;">
                   <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Preferred date</div>
-                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.custom_fields.date_of_event}}</div>
+                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.date_of_event}}</div>
                 </td>
               </tr>
-              {{/if}}
-              {{#if contact.custom_fields.timeline}}
               <tr>
                 <td style="padding:10px 0; border-bottom:1px solid #f3f4f6;">
                   <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Timeline</div>
-                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.custom_fields.timeline}}</div>
+                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.timeline}}</div>
                 </td>
               </tr>
-              {{/if}}
-              {{#if contact.custom_fields.how_many_guests}}
               <tr>
                 <td style="padding:10px 0; border-bottom:1px solid #f3f4f6;">
                   <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Guest count</div>
-                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.custom_fields.how_many_guests}}</div>
+                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.how_many_guests}}</div>
                 </td>
               </tr>
-              {{/if}}
-              {{#if contact.custom_fields.budget_range}}
               <tr>
                 <td style="padding:10px 0; border-bottom:1px solid #f3f4f6;">
                   <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Budget range</div>
-                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.custom_fields.budget_range}}</div>
+                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.budget_range}}</div>
                 </td>
               </tr>
-              {{/if}}
-              {{#if contact.custom_fields.school_name}}
               <tr>
                 <td style="padding:10px 0; border-bottom:1px solid #f3f4f6;">
-                  <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">School</div>
-                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.custom_fields.school_name}}</div>
+                  <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">School (if prom)</div>
+                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.school_name}}</div>
                 </td>
               </tr>
-              {{/if}}
-              {{#if contact.custom_fields.prom_theme}}
               <tr>
                 <td style="padding:10px 0; border-bottom:1px solid #f3f4f6;">
                   <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Prom theme</div>
-                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.custom_fields.prom_theme}}</div>
+                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.prom_theme}}</div>
                 </td>
               </tr>
-              {{/if}}
-              {{#if contact.custom_fields.milestone}}
               <tr>
                 <td style="padding:10px 0; border-bottom:1px solid #f3f4f6;">
-                  <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Milestone</div>
-                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.custom_fields.milestone}}</div>
+                  <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Birthday person (if birthday)</div>
+                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.birthday_person}}</div>
                 </td>
               </tr>
-              {{/if}}
-              {{#if contact.custom_fields.time_of_day}}
               <tr>
                 <td style="padding:10px 0; border-bottom:1px solid #f3f4f6;">
-                  <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Time of day</div>
-                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.custom_fields.time_of_day}}</div>
+                  <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Milestone / age</div>
+                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.milestone__age}}</div>
                 </td>
               </tr>
-              {{/if}}
-              {{#if contact.custom_fields.catering_preference}}
               <tr>
                 <td style="padding:10px 0; border-bottom:1px solid #f3f4f6;">
-                  <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Dining / catering preference</div>
-                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.custom_fields.catering_preference}}</div>
+                  <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Shower type (if shower)</div>
+                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.shower_type}}</div>
                 </td>
               </tr>
-              {{/if}}
-              {{#if contact.custom_fields.wants_tour}}
+              <tr>
+                <td style="padding:10px 0; border-bottom:1px solid #f3f4f6;">
+                  <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Preferred time</div>
+                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.preferred_time}}</div>
+                </td>
+              </tr>
               <tr>
                 <td style="padding:10px 0;">
-                  <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Wants a tour</div>
-                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.custom_fields.wants_tour}}</div>
+                  <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700;">Dining / catering preference</div>
+                  <div style="color:#111111; font-size:15px; margin-top:2px;">{{contact.catering_preference}}</div>
                 </td>
               </tr>
-              {{/if}}
             </table>
           </td>
         </tr>
 
-        {{#if contact.custom_fields.tell_us_about_your_event}}
         <tr>
           <td style="padding:0 32px;">
             <div style="border-top:1px dashed #d1d5db;"></div>
           </td>
         </tr>
+
         <tr>
           <td style="padding:20px 32px;">
             <div style="color:#6b7280; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700; margin-bottom:8px;">Tell us about your event</div>
-            <div style="color:#111111; font-size:14px; line-height:1.6; white-space:pre-wrap;">{{contact.custom_fields.tell_us_about_your_event}}</div>
+            <div style="color:#111111; font-size:14px; line-height:1.6; white-space:pre-wrap;">{{contact.tell_us_about_your_event}}</div>
           </td>
         </tr>
-        {{/if}}
 
         <tr>
           <td style="padding:0 32px;">
@@ -181,8 +151,7 @@
         <tr>
           <td style="padding:20px 32px 28px; text-align:center;">
             <div style="color:#9ca3af; font-size:11px; line-height:1.6;">
-              {{#if contact.custom_fields.lead_source}}Source: {{contact.custom_fields.lead_source}}<br>{{/if}}
-              Received {{contact.date_added}}<br>
+              Source: {{contact.lead_source}}<br>
               <a href="https://app.gohighlevel.com/v2/location/oBEdmRQxsF0ObLbuUbXP/contacts/detail/{{contact.id}}" style="color:#6b7280; text-decoration:underline;">Open in GoHighLevel</a>
             </div>
           </td>
