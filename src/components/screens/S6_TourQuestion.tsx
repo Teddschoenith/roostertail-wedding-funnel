@@ -31,7 +31,7 @@ export default function S6_TourQuestion() {
 
   return (
     <SlideWrapper>
-      <div className="flex flex-col justify-center min-h-[100dvh] px-6 pt-16 pb-12 bg-white">
+      <div className="flex flex-col justify-center min-h-[100dvh] px-6 pt-16 pb-12 bg-white md:max-w-xl md:mx-auto md:w-full">
         <AnimatePresence mode="wait">
           {!wantsTour ? (
             /* ===== YES / NO CARDS ===== */
@@ -100,6 +100,7 @@ export default function S6_TourQuestion() {
               </p>
 
               <div className="max-w-[240px] mx-auto">
+                <label className="block text-xs font-medium text-muted mb-1.5 text-left">Tour date</label>
                 <input
                   type="date"
                   value={tourDate}

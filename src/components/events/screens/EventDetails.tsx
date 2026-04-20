@@ -28,17 +28,18 @@ export default function EventDetails({ config }: { config: EventConfig }) {
           {config.detailsSubtext}
         </p>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
           {config.detailFields.map((field) => {
             if (field.type === 'select' && field.options) {
               return (
                 <div key={field.key}>
+                  <label className="block text-xs font-medium text-muted mb-1.5">{field.label}</label>
                   <select
                     {...register(field.key, { required: field.required })}
                     className={`${inputClass} appearance-none`}
                     defaultValue=""
                   >
-                    <option value="" disabled>{field.label}</option>
+                    <option value="" disabled>Select one</option>
                     {field.options.map((opt) => (
                       <option key={opt} value={opt}>{opt}</option>
                     ))}
@@ -49,6 +50,7 @@ export default function EventDetails({ config }: { config: EventConfig }) {
             if (field.type === 'textarea') {
               return (
                 <div key={field.key}>
+                  <label className="block text-xs font-medium text-muted mb-1.5">{field.label}</label>
                   <textarea
                     {...register(field.key, { required: field.required })}
                     placeholder={field.placeholder || field.label}
@@ -60,6 +62,7 @@ export default function EventDetails({ config }: { config: EventConfig }) {
             }
             return (
               <div key={field.key}>
+                <label className="block text-xs font-medium text-muted mb-1.5">{field.label}</label>
                 <input
                   {...register(field.key, { required: field.required })}
                   placeholder={field.placeholder || field.label}

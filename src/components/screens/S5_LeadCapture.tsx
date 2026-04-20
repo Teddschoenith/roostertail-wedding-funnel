@@ -94,7 +94,7 @@ export default function S5_LeadCapture() {
 
   return (
     <SlideWrapper>
-      <div className="flex flex-col min-h-[100dvh] px-6 pt-16 pb-12 bg-white">
+      <div className="flex flex-col min-h-[100dvh] px-6 pt-16 pb-12 bg-white md:max-w-xl md:mx-auto md:w-full">
         <AnimatePresence mode="wait">
           {!selectedRole ? (
             /* ===== ROLE SELECTOR — IMAGE CARDS ===== */
@@ -106,7 +106,7 @@ export default function S5_LeadCapture() {
               className="stagger"
             >
               <h2 className="font-display text-3xl font-bold text-black mb-2 text-center">
-                What role do you play?
+                Who are you?
               </h2>
               <p className="text-muted text-sm mb-6 text-center">
                 Helps us personalize your experience
@@ -189,8 +189,9 @@ export default function S5_LeadCapture() {
                 <span className="text-xs text-blue underline">change</span>
               </button>
 
-              <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3">
+              <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
                 <div>
+                  <label className="block text-xs font-medium text-muted mb-1.5">{fields!.name}</label>
                   <input
                     {...register('yourName')}
                     placeholder={fields!.name}
@@ -200,6 +201,7 @@ export default function S5_LeadCapture() {
                 </div>
 
                 <div>
+                  <label className="block text-xs font-medium text-muted mb-1.5">{fields!.partner}</label>
                   <input
                     {...register('partnerName')}
                     placeholder={fields!.partner}
@@ -209,6 +211,7 @@ export default function S5_LeadCapture() {
                 </div>
 
                 <div>
+                  <label className="block text-xs font-medium text-muted mb-1.5">Email</label>
                   <input
                     {...register('email')}
                     type="email"
@@ -219,6 +222,7 @@ export default function S5_LeadCapture() {
                 </div>
 
                 <div>
+                  <label className="block text-xs font-medium text-muted mb-1.5">Phone</label>
                   <input
                     {...register('phone')}
                     type="tel"
@@ -229,11 +233,12 @@ export default function S5_LeadCapture() {
                 </div>
 
                 <div>
+                  <label className="block text-xs font-medium text-muted mb-1.5">Best time to call</label>
                   <select {...register('bestTimeToCall')} className={`${inputClass} appearance-none`}>
-                    <option value="No preference">Best time to call: No preference</option>
-                    <option value="Morning">Best time to call: Morning</option>
-                    <option value="Afternoon">Best time to call: Afternoon</option>
-                    <option value="Evening">Best time to call: Evening</option>
+                    <option value="No preference">No preference</option>
+                    <option value="Morning">Morning</option>
+                    <option value="Afternoon">Afternoon</option>
+                    <option value="Evening">Evening</option>
                   </select>
                 </div>
 
@@ -242,7 +247,7 @@ export default function S5_LeadCapture() {
                   disabled={submitting}
                   className="w-full rounded-2xl bg-blue py-4 text-white text-base font-semibold mt-2 active:scale-[0.97] transition-transform disabled:opacity-60"
                 >
-                  {submitting ? 'Sending...' : 'Let\'s talk →'}
+                  {submitting ? 'Sending...' : 'Let\'s get in touch with the coordinator →'}
                 </button>
               </form>
             </motion.div>

@@ -99,6 +99,7 @@ export default function EventTourQuestion({ config }: { config: EventConfig }) {
               </p>
 
               <div className="max-w-[240px] mx-auto">
+                <label className="block text-xs font-medium text-muted mb-1.5 text-left">Tour date</label>
                 <input
                   type="date"
                   value={tourDate}

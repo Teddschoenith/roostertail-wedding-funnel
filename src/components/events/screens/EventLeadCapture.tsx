@@ -142,8 +142,9 @@ export default function EventLeadCapture({ config }: { config: EventConfig }) {
                 <span>{selectedRole} - change</span>
               </button>
 
-              <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3">
+              <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
                 <div>
+                  <label className="block text-xs font-medium text-muted mb-1.5">Your name</label>
                   <input
                     {...register('yourName', { required: 'Name is required' })}
                     placeholder="Your name"
@@ -153,6 +154,7 @@ export default function EventLeadCapture({ config }: { config: EventConfig }) {
                 </div>
 
                 <div>
+                  <label className="block text-xs font-medium text-muted mb-1.5">Email</label>
                   <input
                     {...register('email', { required: 'Email is required' })}
                     type="email"
@@ -163,6 +165,7 @@ export default function EventLeadCapture({ config }: { config: EventConfig }) {
                 </div>
 
                 <div>
+                  <label className="block text-xs font-medium text-muted mb-1.5">Phone</label>
                   <input
                     {...register('phone')}
                     type="tel"
@@ -173,6 +176,7 @@ export default function EventLeadCapture({ config }: { config: EventConfig }) {
 
                 {config.showCompanyUrl && (
                   <div>
+                    <label className="block text-xs font-medium text-muted mb-1.5">Company website (optional)</label>
                     <input
                       {...register('companyUrl')}
                       type="url"

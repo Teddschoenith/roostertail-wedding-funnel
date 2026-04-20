@@ -58,38 +58,47 @@ export default function EventDatePicker({ config }: { config: EventConfig }) {
         </p>
 
         <div className="flex gap-2 mb-6">
-          <select
-            value={month}
-            onChange={(e) => setMonth(e.target.value)}
-            className={selectClass}
-          >
-            <option value="">Month</option>
-            {months.map((m, i) => (
-              <option key={m} value={i}>{m}</option>
-            ))}
-          </select>
+          <div className="flex-1">
+            <label className="block text-xs font-medium text-muted mb-1.5 text-center">Month</label>
+            <select
+              value={month}
+              onChange={(e) => setMonth(e.target.value)}
+              className={`${selectClass} w-full`}
+            >
+              <option value="">Month</option>
+              {months.map((m, i) => (
+                <option key={m} value={i}>{m}</option>
+              ))}
+            </select>
+          </div>
 
-          <select
-            value={day}
-            onChange={(e) => setDay(e.target.value)}
-            className={selectClass}
-          >
-            <option value="">Day</option>
-            {Array.from({ length: daysCount }, (_, i) => i + 1).map((d) => (
-              <option key={d} value={d}>{d}</option>
-            ))}
-          </select>
+          <div className="flex-1">
+            <label className="block text-xs font-medium text-muted mb-1.5 text-center">Day</label>
+            <select
+              value={day}
+              onChange={(e) => setDay(e.target.value)}
+              className={`${selectClass} w-full`}
+            >
+              <option value="">Day</option>
+              {Array.from({ length: daysCount }, (_, i) => i + 1).map((d) => (
+                <option key={d} value={d}>{d}</option>
+              ))}
+            </select>
+          </div>
 
-          <select
-            value={year}
-            onChange={(e) => setYear(e.target.value)}
-            className={selectClass}
-          >
-            <option value="">Year</option>
-            {years.map((y) => (
-              <option key={y} value={y}>{y}</option>
-            ))}
-          </select>
+          <div className="flex-1">
+            <label className="block text-xs font-medium text-muted mb-1.5 text-center">Year</label>
+            <select
+              value={year}
+              onChange={(e) => setYear(e.target.value)}
+              className={`${selectClass} w-full`}
+            >
+              <option value="">Year</option>
+              {years.map((y) => (
+                <option key={y} value={y}>{y}</option>
+              ))}
+            </select>
+          </div>
         </div>
 
         <button
