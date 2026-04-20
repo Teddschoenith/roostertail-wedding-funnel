@@ -20,7 +20,7 @@
 
         <tr>
           <td style="padding:12px 32px 20px; text-align:center;">
-            <div style="font-size:30px; font-weight:800; color:#111111; letter-spacing:-0.5px; text-transform:uppercase;">{{#if contact.custom_fields.type_of_event}}{{contact.custom_fields.type_of_event}}{{else}}Social event{{/if}}</div>
+            <div style="font-size:30px; font-weight:800; color:#111111; letter-spacing:-0.5px; text-transform:uppercase;">Social event</div>
             <h1 style="margin:10px 0 0; font-size:20px; font-weight:600; color:#374151;">{{contact.first_name}} {{contact.last_name}}</h1>
           </td>
         </tr>
@@ -179,14 +179,7 @@
         </tr>
 
         <tr>
-          <td style="padding:20px 32px 8px; text-align:center;">
-            <a href="mailto:{{contact.email}}" style="display:inline-block; background:#111111; color:#ffffff; text-decoration:none; padding:12px 28px; border-radius:8px; font-weight:600; font-size:14px; margin:4px;">Email lead</a>
-            <a href="tel:{{contact.phone}}" style="display:inline-block; background:#ffffff; color:#111111; text-decoration:none; padding:12px 28px; border-radius:8px; font-weight:600; font-size:14px; border:1px solid #111111; margin:4px;">Call lead</a>
-          </td>
-        </tr>
-
-        <tr>
-          <td style="padding:16px 32px 28px; text-align:center;">
+          <td style="padding:20px 32px 28px; text-align:center;">
             <div style="color:#9ca3af; font-size:11px; line-height:1.6;">
               {{#if contact.custom_fields.lead_source}}Source: {{contact.custom_fields.lead_source}}<br>{{/if}}
               Received {{contact.date_added}}<br>
