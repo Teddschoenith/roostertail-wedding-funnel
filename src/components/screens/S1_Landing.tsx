@@ -197,15 +197,15 @@ export default function S1_Landing() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
             {[
               { icon: '🍽️', title: 'Plated or buffet dinner', desc: 'Chef-prepared, your choice' },
-              { icon: '🥂', title: 'Full open bar', desc: 'Premium spirits, bartenders included' },
+              { icon: '🥂', title: 'In-house bar service', desc: 'Open bar, cash bar, or custom packages' },
               { icon: '🪑', title: 'Tables, chairs & linens', desc: 'Chiavari chairs, chargers, all of it' },
               { icon: '👔', title: 'Professional service staff', desc: 'Venue setup, service, and breakdown' },
-              { icon: '🎶', title: 'Enhanced event lighting', desc: 'Lighting designed to complement the space' },
+              { icon: '💡', title: 'Permanently installed LED lighting', desc: 'Custom colors and effects, DJ-ready' },
               { icon: '🅿️', title: 'On-site guest parking', desc: 'Convenient self-parking included' },
               { icon: '🌅', title: 'Waterfront access', desc: 'Right on the Detroit River' },
               { icon: '🏡', title: 'Private patio', desc: 'Exclusive outdoor space for your guests' },
               { icon: '📋', title: 'Venue coordinator', desc: 'Your point person for venue planning and logistics' },
-              { icon: '💍', title: 'Ceremony on-site', desc: 'Indoor or outdoor options with weather backup' },
+              { icon: '💍', title: 'Ceremony on-site', desc: 'Outdoor ceremony options with weather backup' },
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-xl p-4">
                 <span className="text-2xl mb-2 block">{item.icon}</span>
