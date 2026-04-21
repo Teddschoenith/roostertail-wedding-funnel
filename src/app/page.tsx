@@ -69,11 +69,11 @@ const gallery = [
 
 const faqs = [
   { q: 'What types of events do you host?', a: 'Weddings, corporate events, holiday parties, proms, birthdays, showers, reunions, fundraisers, and more. If you can celebrate it, we have hosted it.' },
-  { q: 'How many guests can you accommodate?', a: 'Our venue accommodates 30 to 400+ guests depending on the event format and room configuration.' },
-  { q: 'What is included?', a: 'Every event includes on-site parking, a dedicated event coordinator, professional service staff, tables, chairs, linens, and full setup and breakdown.' },
-  { q: 'Do you provide catering?', a: 'Yes. We offer plated dinners, buffet service, cocktail receptions, and brunch packages. Our chef can customize menus to your preferences and dietary needs.' },
-  { q: 'How far in advance should we book?', a: 'We recommend 2-6 months in advance. Holiday dates and weekends fill up faster, so the earlier the better for those.' },
-  { q: 'Can we bring our own DJ?', a: 'Yes! You can bring your own DJ or band. Our venue has a professional sound system ready to use. We can also connect you with preferred vendors.' },
+  { q: 'How many guests can you accommodate?', a: 'Our venue accommodates 30 to 2,000+ guests depending on the event format and room configuration.' },
+  { q: 'What is included?', a: 'Every event includes on-site parking, a dedicated venue coordinator, professional service staff, tables, chairs, linens, and full setup and breakdown of our equipment.' },
+  { q: 'Do you provide catering?', a: 'We take a lot of pride in our food and have award-winning chefs. Our chef can customize menus to your preferences and dietary needs.' },
+  { q: 'How far in advance should we book?', a: 'Some events book one to two years prior to the event date. Some are two weeks before. We can do it all.' },
+  { q: 'Can we bring our own DJ?', a: 'Yes! You can bring your own DJ or band. We can also connect you with preferred vendors.' },
 ]
 
 export default function Home() {
@@ -160,11 +160,11 @@ export default function Home() {
               { icon: '🥂', title: 'Full bar service', desc: 'Open bar, cash bar, or custom packages' },
               { icon: '🪑', title: 'Tables, chairs & linens', desc: 'Everything you need, included' },
               { icon: '👔', title: 'Professional service staff', desc: 'Setup, service, and breakdown' },
-              { icon: '🎶', title: 'Sound system & lighting', desc: 'DJ-ready with custom uplighting' },
+              { icon: '💡', title: 'Permanently installed LED lighting', desc: 'Custom colors and effects, DJ-ready' },
               { icon: '🅿️', title: 'On-site parking', desc: 'Convenient self-parking included' },
               { icon: '🌅', title: 'Waterfront views', desc: 'Right on the Detroit River' },
               { icon: '🏡', title: 'Private patio', desc: 'Exclusive outdoor space' },
-              { icon: '📋', title: 'Event coordinator', desc: 'Your point person for all logistics' },
+              { icon: '📋', title: 'Venue coordinator', desc: 'Your point person for all logistics' },
               { icon: '✨', title: 'Flexible configurations', desc: 'Cocktail, seated, theater, and more' },
             ].map((item) => (
               <div key={item.title} className="bg-light-gray rounded-xl p-4">
@@ -206,10 +206,10 @@ export default function Home() {
 
           <div className="md:flex md:justify-center mt-8">
             <Link
-              href="/wedding"
+              href="/get-started"
               className="w-full md:w-auto md:px-16 rounded-2xl bg-blue py-4 text-white text-base font-semibold hover:bg-blue-dark active:scale-[0.97] transition-all block text-center"
             >
-              Get in touch with an event coordinator &rarr;
+              Get in touch with an venue coordinator &rarr;
             </Link>
           </div>
           <p className="text-muted text-xs mt-3 text-center">Takes less than 60 seconds</p>
@@ -269,7 +269,7 @@ export default function Home() {
               The Roostertail sits on the Detroit River with panoramic waterfront views that have hosted over 10,000 celebrations. From weddings to corporate galas, proms to birthday parties, we bring your vision to life.
             </p>
             <p className="text-muted text-sm md:text-base leading-relaxed">
-              Our dedicated event coordinators and professional staff support you through the entire planning process. That&apos;s why organizations and families across Michigan choose us year after year.
+              Our dedicated venue coordinators and professional staff support you through the entire planning process. That&apos;s why organizations and families across Michigan choose us year after year.
             </p>
           </div>
         </div>

@@ -6,7 +6,7 @@ import SlideWrapper from '@/components/funnel/SlideWrapper'
 import { useFunnelStore } from '@/lib/funnel-store'
 
 export default function S6_TourQuestion() {
-  const { setAnswer, goNext } = useFunnelStore()
+  const { setAnswer } = useFunnelStore()
   const [wantsTour, setWantsTour] = useState<string | null>(null)
   const [tourDate, setTourDate] = useState('')
   const [submitted, setSubmitted] = useState(false)
@@ -14,7 +14,9 @@ export default function S6_TourQuestion() {
   const handleNo = () => {
     setWantsTour('no')
     setAnswer('wantsTour', 'no')
-    setTimeout(() => goNext(), 400)
+    setTimeout(() => {
+      window.location.href = '/thank-you?type=wedding&tour=no'
+    }, 400)
   }
 
   const handleYes = () => {
@@ -26,7 +28,9 @@ export default function S6_TourQuestion() {
     if (!tourDate) return
     setAnswer('tourDate', tourDate)
     setSubmitted(true)
-    setTimeout(() => goNext(), 600)
+    setTimeout(() => {
+      window.location.href = '/thank-you?type=wedding&tour=yes'
+    }, 600)
   }
 
   return (

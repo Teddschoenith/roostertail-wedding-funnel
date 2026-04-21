@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 const faqs = [
   {
     q: 'What is included in the per-person price?',
-    a: 'The per-person package includes your meal service (plated or buffet), full open bar with bartenders, tax, and gratuity. Some events may also include additional venue or ceremony-related fees depending on the date, space, and setup.',
+    a: 'The per-person package includes your meal service and bar service. Events may include additional venue or ceremony-related fees that depend on the date, space, and setup.',
   },
   {
     q: 'Do I need to hire separate vendors for chairs, tables, or linens?',
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: 'Can I have my ceremony and reception at The Roostertail?',
-    a: 'Absolutely. We offer both indoor and outdoor ceremony options, plus a weather backup plan. Ceremony setup details and availability can be reviewed with our team based on your package and event needs.',
+    a: 'Absolutely. We offer outdoor ceremony options with a weather backup plan. Ceremony setup details and availability can be reviewed with our team based on your package and event needs.',
   },
   {
     q: 'How many guests can you accommodate?',

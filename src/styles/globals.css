@@ -72,15 +72,7 @@ html.funnel-active, html.funnel-active body {
 .stagger > *:nth-child(8) { animation-delay: 0.32s; }
 
 /* ─── Desktop responsive ─── */
-@media (min-width: 768px) {
-  .funnel-screen {
-    max-width: 540px;
-    margin-left: auto;
-    margin-right: auto;
-    border-left: 1px solid var(--color-border);
-    border-right: 1px solid var(--color-border);
-  }
-}
+/* Funnel screens stretch full-width; individual sections handle their own max-width */
 
 /* Homepage desktop: constrained content within full-bleed sections */
 @media (min-width: 768px) {

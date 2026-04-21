@@ -122,7 +122,7 @@ export default function EventLanding({ config }: { config: EventConfig }) {
               onClick={goNext}
               className="w-full md:w-auto md:px-16 rounded-2xl bg-blue py-4 text-white text-base font-semibold hover:bg-blue-dark active:scale-[0.97] transition-all"
             >
-              Let&apos;s get you in touch with an event coordinator &rarr;
+              Let&apos;s get you in touch with a venue coordinator &rarr;
             </button>
           </div>
           <p className="text-muted text-xs mt-3 text-center">Takes less than 60 seconds</p>
@@ -186,7 +186,7 @@ export default function EventLanding({ config }: { config: EventConfig }) {
             onClick={goNext}
             className="w-full md:w-auto md:px-16 rounded-2xl bg-blue py-4 text-white text-base font-semibold hover:bg-blue-dark active:scale-[0.97] transition-all"
           >
-            Let&apos;s get you in touch with an event coordinator &rarr;
+            Let&apos;s get you in touch with a venue coordinator &rarr;
           </button>
         </div>
       </section>

@@ -68,6 +68,8 @@ export default function S5_LeadCapture() {
     const payload = {
       ...data,
       role: selectedRole,
+      eventType: 'Wedding',
+      eventSlug: 'wedding',
       weddingDate: answers.weddingDate,
       timeline: answers.timeline,
       guestCount: answers.guestCount,

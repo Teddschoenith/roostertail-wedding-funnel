@@ -20,7 +20,7 @@ export default function S3_GuestCount() {
 
   return (
     <SlideWrapper>
-      <div className="flex flex-col justify-center min-h-[100dvh] px-6 pt-16 pb-12 bg-white stagger">
+      <div className="flex flex-col justify-center min-h-[100dvh] px-6 pt-16 pb-12 bg-white stagger md:max-w-xl md:mx-auto md:w-full">
         <h2 className="font-display text-3xl font-bold text-black mb-2">
           How big is the party?
         </h2>

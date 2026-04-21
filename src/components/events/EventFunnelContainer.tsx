@@ -12,7 +12,6 @@ import EventDatePicker from './screens/EventDatePicker'
 import EventGuestCount from './screens/EventGuestCount'
 import EventDetails from './screens/EventDetails'
 import EventLeadCapture from './screens/EventLeadCapture'
-import EventThankYou from './screens/EventThankYou'
 
 interface Props {
   config: EventConfig
@@ -28,7 +27,6 @@ export default function EventFunnelContainer({ config }: Props) {
     { component: EventGuestCount, name: 'guest_count' },
     { component: EventDetails, name: 'event_details' },
     { component: EventLeadCapture, name: 'lead_capture' },
-    { component: EventThankYou, name: 'thank_you' },
   ]
 
   useEffect(() => {
@@ -40,7 +38,7 @@ export default function EventFunnelContainer({ config }: Props) {
 
   useEffect(() => {
     setUTMParams(captureUTMParams())
-    setTotalSteps(screens.length)
+    setTotalSteps(screens.length + 1)
     setAnswer('eventType', config.eventType)
 
     // Preload key images

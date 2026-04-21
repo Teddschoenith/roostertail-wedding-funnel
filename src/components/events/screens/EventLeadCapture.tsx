@@ -16,7 +16,7 @@ interface FormData {
 }
 
 export default function EventLeadCapture({ config }: { config: EventConfig }) {
-  const { answers, setAnswer, goNext, utmParams } = useEventFunnelStore()
+  const { answers, setAnswer, utmParams } = useEventFunnelStore()
   const [selectedRole, setSelectedRole] = useState<string | null>((answers.role as string) || null)
   const [submitting, setSubmitting] = useState(false)
 
@@ -66,7 +66,9 @@ export default function EventLeadCapture({ config }: { config: EventConfig }) {
     trackMetaEvent('Lead', { content_name: config.analyticsEventName, ...payload })
     trackGA4Event('generate_lead', { method: config.analyticsEventName, ...payload })
 
-    goNext()
+    setTimeout(() => {
+      window.location.href = `/thank-you?type=${config.slug}`
+    }, 150)
   }
 
   const inputClass = 'w-full rounded-xl border-2 border-border bg-white px-4 py-4 text-base text-black placeholder:text-muted/50 focus:border-blue focus:outline-none transition-colors'

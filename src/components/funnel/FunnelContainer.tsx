@@ -13,7 +13,6 @@ import S4_GuestCount from '@/components/screens/S3_GuestCount'
 import S5_Pricing from '@/components/screens/S4_Pricing'
 import S6_LeadCapture from '@/components/screens/S5_LeadCapture'
 import S7_TourQuestion from '@/components/screens/S6_TourQuestion'
-import S8_ThankYou from '@/components/screens/S7_ThankYou'
 
 // Preload all quiz images so they're cached before users swipe to them
 const quizImages = [
@@ -55,7 +54,6 @@ const screens = [
   { component: S5_Pricing, name: 'pricing' },
   { component: S6_LeadCapture, name: 'lead_capture' },
   { component: S7_TourQuestion, name: 'tour_question' },
-  { component: S8_ThankYou, name: 'thank_you' },
 ]
 
 export default function FunnelContainer() {
