@@ -165,7 +165,7 @@ export default function Home() {
               { icon: '🌅', title: 'Waterfront views', desc: 'Right on the Detroit River' },
               { icon: '🏡', title: 'Private patio', desc: 'Exclusive outdoor space' },
               { icon: '📋', title: 'Venue coordinator', desc: 'Your point person for all logistics' },
-              { icon: '✨', title: 'Flexible configurations', desc: 'Cocktail, seated, theater, and more' },
+              { icon: '✨', title: 'Flexible configurations', desc: 'Layouts tailored to your event' },
             ].map((item) => (
               <div key={item.title} className="bg-light-gray rounded-xl p-4">
                 <span className="text-2xl mb-2 block">{item.icon}</span>

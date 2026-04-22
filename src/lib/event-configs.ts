@@ -107,7 +107,7 @@ export const corporateConfig: EventConfig = {
     { icon: '🎤', title: 'Full AV & staging', desc: 'Projectors, podiums, and permanently installed LED lighting' },
     { icon: '🍽️', title: 'Plated or buffet dining', desc: 'Chef-prepared menus for every taste' },
     { icon: '🥂', title: 'Full bar service', desc: 'Open bar, cash bar, or custom packages' },
-    { icon: '🪑', title: 'Flexible configurations', desc: 'Boardroom, theater, banquet, cocktail' },
+    { icon: '🪑', title: 'Flexible configurations', desc: 'Layouts tailored to your event' },
     { icon: '📶', title: 'High-speed Wi-Fi', desc: 'Reliable internet for all attendees' },
     { icon: '🅿️', title: 'On-site parking', desc: 'Convenient self-parking for your guests' },
     { icon: '🌅', title: 'Waterfront backdrop', desc: 'Stunning views of the Detroit River' },
@@ -148,7 +148,7 @@ export const corporateConfig: EventConfig = {
   aboutImages: ['/images/roostertail-501_websize.webp', '/images/roostertail-858_websize.webp'],
   faq: [
     { question: 'What AV equipment is included?', answer: 'Our venue includes permanently installed LED lighting, wireless microphones, a projector with screen, and stage lighting. Additional equipment can be arranged through our preferred vendors.' },
-    { question: 'Can we customize the room layout?', answer: 'Yes. We have different types of tables and offer boardroom, theater, banquet, cocktail, and hybrid configurations. We will recommend the setup that will best fit your event.' },
+    { question: 'Can we customize the room layout?', answer: 'Yes. We will recommend the setup that best fits your event.' },
     { question: 'What catering options are available?', answer: 'We offer plated dinners, buffet service, cocktail receptions, and breakfast/lunch meetings. Our chef can accommodate dietary restrictions and customize menus to your preferences.' },
     { question: 'Is there parking for guests?', answer: 'Yes, we have a large on-site parking lot with convenient self-parking for all attendees.' },
     { question: 'How far in advance should we book?', answer: 'We recommend booking 3-6 months in advance for corporate events, especially for weekend dates. Weekday availability is often more flexible.' },
