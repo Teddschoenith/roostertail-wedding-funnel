@@ -19,6 +19,7 @@ const LEAD_INFO = {
   timeline: 'FeZsbz2w4UPQkt0rCa4a',
   role: 'yhiIz6FRN0aKtOVVAaqq',
   bestTimeToCall: 't5ZAD8WjanKQaU5DFkaj',
+  ceremonyOnSite: 't2uGJwS1ISq1ylGOk0ZU',
 }
 
 // ─── EVENT DETAILS FIELD IDS ────────────────────────────────────────
@@ -131,6 +132,7 @@ function buildCustomFields(payload: Record<string, any>): { id: string; field_va
   add(LEAD_INFO.timeline, payload.timeline)
   add(LEAD_INFO.role, payload.role)
   add(LEAD_INFO.bestTimeToCall, payload.bestTimeToCall)
+  add(LEAD_INFO.ceremonyOnSite, payload.ceremonyOnSite)
 
   // Event Details
   const catering = payload.cateringStyle || payload.catering || payload.diningStyle

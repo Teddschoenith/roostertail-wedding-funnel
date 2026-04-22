@@ -10,9 +10,10 @@ import S1_Landing from '@/components/screens/S1_Landing'
 import S2_WeddingDate from '@/components/screens/S2_WeddingDate'
 import S3_Timeline from '@/components/screens/S2_Timeline'
 import S4_GuestCount from '@/components/screens/S3_GuestCount'
-import S5_Pricing from '@/components/screens/S4_Pricing'
-import S6_LeadCapture from '@/components/screens/S5_LeadCapture'
-import S7_TourQuestion from '@/components/screens/S6_TourQuestion'
+import S5_Ceremony from '@/components/screens/S5_Ceremony'
+import S6_Pricing from '@/components/screens/S4_Pricing'
+import S7_LeadCapture from '@/components/screens/S5_LeadCapture'
+import S8_TourQuestion from '@/components/screens/S6_TourQuestion'
 
 // Preload all quiz images so they're cached before users swipe to them
 const quizImages = [
@@ -51,9 +52,10 @@ const screens = [
   { component: S2_WeddingDate, name: 'wedding_date' },
   { component: S3_Timeline, name: 'timeline' },
   { component: S4_GuestCount, name: 'guest_count' },
-  { component: S5_Pricing, name: 'pricing' },
-  { component: S6_LeadCapture, name: 'lead_capture' },
-  { component: S7_TourQuestion, name: 'tour_question' },
+  { component: S5_Ceremony, name: 'ceremony' },
+  { component: S6_Pricing, name: 'pricing' },
+  { component: S7_LeadCapture, name: 'lead_capture' },
+  { component: S8_TourQuestion, name: 'tour_question' },
 ]
 
 export default function FunnelContainer() {

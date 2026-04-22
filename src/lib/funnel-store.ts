@@ -10,6 +10,7 @@ export interface FunnelAnswers {
   phone?: string
   bestTimeToCall?: string
   tourDate?: string
+  ceremonyOnSite?: string
   [key: string]: string | string[] | boolean | undefined
 }
 

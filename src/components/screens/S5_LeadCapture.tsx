@@ -75,6 +75,7 @@ export default function S5_LeadCapture() {
       guestCount: answers.guestCount,
       headlineVariant: answers.headlineVariant,
       beenBefore: answers.beenBefore,
+      ceremonyOnSite: answers.ceremonyOnSite,
       utmParams,
       submittedAt: new Date().toISOString(),
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
