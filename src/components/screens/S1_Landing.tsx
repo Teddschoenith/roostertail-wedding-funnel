@@ -233,13 +233,13 @@ export default function S1_Landing() {
                 quote: "honestly we visited five other venues and none of them even came close. what we wanted was there, the water, the experience, and the trust that this was going to be the best night of our lives. it was.",
                 name: 'Eliane & Paul',
                 detail: '',
-                img: '/images/couple-dock-waterfront-golden-hour.webp',
+                img: '/images/couple-entrance-sunglasses-fun.webp',
               },
               {
                 quote: "our coordinator was amazing like she remembered every little detail we told her months ago. the day of we didnt have to think about anything we just showed up and had the best night of our lives",
                 name: 'Emma & Emily',
                 detail: '',
-                img: '/images/outdoor-waterfront-ceremony-aisle.webp',
+                img: '/images/couple-speech-toast-reception.webp',
               },
               {
                 quote: "i went into my wedding journey thinking i was going to be super stressed. i was reassured from the moment i got there that stress wasn't an option. so much of the stress in weddings was handled by them. it was my wedding day when i realized i made two of the best decisions of my life.",
@@ -287,7 +287,7 @@ export default function S1_Landing() {
 
           <div className="grid grid-cols-3 gap-2 md:gap-4">
             {[
-              { src: '/images/outdoor-waterfront-ceremony-aisle.webp', alt: 'Outdoor waterfront ceremony' },
+              { src: '/images/champagne-tower-bride-pouring.webp', alt: 'Champagne tower pour' },
               { src: '/images/couple-fountain-night-dramatic.webp', alt: 'Couple by the fountain at night' },
               { src: '/images/first-dance-sunset-windows.webp', alt: 'First dance at sunset' },
               { src: '/images/waterfront-tablescape-chiavari-chairs.webp', alt: 'Waterfront tablescape' },
