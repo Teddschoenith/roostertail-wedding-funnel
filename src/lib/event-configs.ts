@@ -177,7 +177,7 @@ export const corporateConfig: EventConfig = {
   detailFields: [
     { key: 'companyName', type: 'text', label: 'Company / Organization', placeholder: 'Company name', required: true },
     { key: 'eventSubType', type: 'select', label: 'Type of event', options: ['Conference / Meeting', 'Awards / Gala', 'Team Celebration', 'Other'], required: true },
-    { key: 'cateringStyle', type: 'select', label: 'Catering preference', options: ['No Food', 'Plated Dinner', 'Buffet', 'Other'], required: false },
+    { key: 'cateringStyle', type: 'select', label: 'Catering preference', options: ['Buffet', 'Appetizers', 'Plated', 'No food'], required: false },
   ],
   roles: [
     { label: 'CEO / Owner', img: '/images/roostertail-433_websize.webp' },
@@ -285,7 +285,7 @@ export const holidayConfig: EventConfig = {
   detailsSubtext: 'So we can match you with the right package',
   detailFields: [
     { key: 'partyType', type: 'select', label: 'Company or personal?', options: ['Company / Corporate', 'Personal / Family', 'Nonprofit / Organization'], required: true },
-    { key: 'cateringStyle', type: 'select', label: 'Food options', options: ['Buffet', 'Plated Dinner', 'Food Stations'], required: true },
+    { key: 'cateringStyle', type: 'select', label: 'Catering preference', options: ['Buffet', 'Appetizers', 'Plated', 'No food'], required: true },
   ],
   roles: [
     { label: 'Event Planner', img: '/images/holiday-roostertail-586_websize.webp' },
@@ -394,7 +394,7 @@ export const promConfig: EventConfig = {
   detailFields: [
     { key: 'schoolName', type: 'text', label: 'School name', placeholder: 'Your school name', required: true },
     { key: 'promTheme', type: 'text', label: 'Prom theme (if you have one)', placeholder: 'e.g., Enchanted Garden, Old Hollywood', required: false },
-    { key: 'diningStyle', type: 'select', label: 'Dining preference', options: ['Plated Dinner', 'Buffet', 'Appetizers Only', 'Not Sure Yet'], required: false },
+    { key: 'diningStyle', type: 'select', label: 'Catering preference', options: ['Buffet', 'Appetizers', 'Plated', 'No food'], required: false },
   ],
   roles: [
     { label: 'Student', img: '/images/events/greetingcardconferenceevent-92.webp' },
@@ -608,7 +608,7 @@ export const showerConfig: EventConfig = {
   detailFields: [
     { key: 'showerType', type: 'select', label: 'Type of shower', options: ['Bridal Shower', 'Baby Shower', 'Other'], required: true },
     { key: 'timeOfDay', type: 'select', label: 'Preferred time', options: ['Morning Brunch', 'Afternoon Lunch', 'Evening Celebration'], required: true },
-    { key: 'catering', type: 'select', label: 'Catering preference', options: ['Appetizers', 'Lunch', 'Brunch'], required: false },
+    { key: 'catering', type: 'select', label: 'Catering preference', options: ['Buffet', 'Appetizers', 'Plated', 'No food'], required: false },
   ],
   roles: [
     { label: 'The Bride / Guest of Honor', img: '/images/roostertail-509_websize.webp' },
@@ -714,7 +714,7 @@ export const otherConfig: EventConfig = {
   detailsSubtext: 'So we can put together the right proposal',
   detailFields: [
     { key: 'eventSubType', type: 'textarea', label: 'What kind of event are you planning?', placeholder: 'Tell us about your event...', required: true },
-    { key: 'catering', type: 'select', label: 'Catering needs', options: ['Buffet', 'Food Stations', 'Appetizers', 'Plated Dinner'], required: false },
+    { key: 'catering', type: 'select', label: 'Catering preference', options: ['Buffet', 'Appetizers', 'Plated', 'No food'], required: false },
     { key: 'additionalNotes', type: 'text', label: 'Anything else we should know?', placeholder: 'Tell us about your vision...', required: false },
   ],
   roles: [

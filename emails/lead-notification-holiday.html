@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Lead</title>
+</head>
+<body style="margin:0; padding:24px; background-color:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif; color:#111; font-size:15px; line-height:1.5;">
+
+<div style="max-width:540px; margin:0 auto;">
+
+  <div style="margin:0 0 18px;">
+    <span style="display:inline-block; background-color:#1e3a8a; color:#ffffff; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; padding:6px 14px; border-radius:999px;">
+      {{contact.type_of_event}}
+    </span>
+  </div>
+
+  <p style="margin:0 0 18px;">New lead just came in. Here are the details:</p>
+
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#f3f4f6; border-radius:12px;">
+    <tr>
+      <td style="padding:20px 22px;">
+        <p style="margin:0 0 12px;"><span style="color:#6b7280; font-size:11px; text-transform:uppercase; letter-spacing:0.6px; font-weight:600;">Name</span><br><span style="font-size:15px; font-weight:600;">{{contact.first_name}} {{contact.last_name}}</span></p>
+        <p style="margin:0 0 12px;"><span style="color:#6b7280; font-size:11px; text-transform:uppercase; letter-spacing:0.6px; font-weight:600;">Party type</span><br><span style="font-size:15px; font-weight:600;">{{contact.party_type}}</span></p>
+        <p style="margin:0 0 12px;"><span style="color:#6b7280; font-size:11px; text-transform:uppercase; letter-spacing:0.6px; font-weight:600;">Company / organization</span><br><span style="font-size:15px; font-weight:600;">{{contact.company__organization}}</span></p>
+        <p style="margin:0 0 12px;"><span style="color:#6b7280; font-size:11px; text-transform:uppercase; letter-spacing:0.6px; font-weight:600;">Email</span><br><span style="font-size:15px; font-weight:600;">{{contact.email}}</span></p>
+        <p style="margin:0 0 12px;"><span style="color:#6b7280; font-size:11px; text-transform:uppercase; letter-spacing:0.6px; font-weight:600;">Phone</span><br><span style="font-size:15px; font-weight:600;">{{contact.phone}}</span></p>
+        <p style="margin:0 0 12px;"><span style="color:#6b7280; font-size:11px; text-transform:uppercase; letter-spacing:0.6px; font-weight:600;">Role</span><br><span style="font-size:15px; font-weight:600;">{{contact.role}}</span></p>
+        <p style="margin:0 0 12px;"><span style="color:#6b7280; font-size:11px; text-transform:uppercase; letter-spacing:0.6px; font-weight:600;">Have you ever been to a Roostertail event?</span><br><span style="font-size:15px; font-weight:600;">{{contact.been_before}}</span></p>
+        <p style="margin:0 0 12px;"><span style="color:#6b7280; font-size:11px; text-transform:uppercase; letter-spacing:0.6px; font-weight:600;">Date of event</span><br><span style="font-size:15px; font-weight:600;">{{contact.date_of_event}}</span></p>
+        <p style="margin:0 0 12px;"><span style="color:#6b7280; font-size:11px; text-transform:uppercase; letter-spacing:0.6px; font-weight:600;">Timeline</span><br><span style="font-size:15px; font-weight:600;">{{contact.timeline}}</span></p>
+        <p style="margin:0 0 12px;"><span style="color:#6b7280; font-size:11px; text-transform:uppercase; letter-spacing:0.6px; font-weight:600;">Guest count</span><br><span style="font-size:15px; font-weight:600;">{{contact.how_many_guests}}</span></p>
+        <p style="margin:0 0 12px;"><span style="color:#6b7280; font-size:11px; text-transform:uppercase; letter-spacing:0.6px; font-weight:600;">Catering preference</span><br><span style="font-size:15px; font-weight:600;">{{contact.catering_preference}}</span></p>
+        <p style="margin:0 0 12px;"><span style="color:#6b7280; font-size:11px; text-transform:uppercase; letter-spacing:0.6px; font-weight:600;">Budget range</span><br><span style="font-size:15px; font-weight:600;">{{contact.budget_range}}</span></p>
+        <p style="margin:0;"><span style="color:#6b7280; font-size:11px; text-transform:uppercase; letter-spacing:0.6px; font-weight:600;">Tell us about your event</span><br><span style="font-size:15px; font-weight:600;">{{contact.tell_us_about_your_event}}</span></p>
+      </td>
+    </tr>
+  </table>
+
+  <p style="margin:18px 0 0; color:#6b7280; font-size:13px;">Source: {{contact.lead_source}}</p>
+
+</div>
+
+</body>
+</html>
