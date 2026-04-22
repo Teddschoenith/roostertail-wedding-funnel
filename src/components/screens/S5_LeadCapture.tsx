@@ -191,12 +191,20 @@ export default function S5_LeadCapture() {
                 <span className="text-xs text-blue underline">change</span>
               </button>
 
-              <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+              <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4" noValidate>
                 <div>
                   <label className="block text-xs font-medium text-muted mb-1.5">{fields!.name}</label>
                   <input
-                    {...register('yourName')}
+                    {...register('yourName', {
+                      required: 'Please enter your name',
+                      minLength: { value: 2, message: 'Please enter your full name' },
+                    })}
+                    type="text"
                     placeholder={fields!.name}
+                    autoComplete="name"
+                    autoCapitalize="words"
+                    autoCorrect="off"
+                    enterKeyHint="next"
                     className={inputClass}
                   />
                   {errors.yourName && <p className="text-red-500 text-xs mt-1">{errors.yourName.message}</p>}
@@ -205,8 +213,16 @@ export default function S5_LeadCapture() {
                 <div>
                   <label className="block text-xs font-medium text-muted mb-1.5">{fields!.partner}</label>
                   <input
-                    {...register('partnerName')}
+                    {...register('partnerName', {
+                      required: 'Please enter this name',
+                      minLength: { value: 2, message: 'Please enter the full name' },
+                    })}
+                    type="text"
                     placeholder={fields!.partner}
+                    autoComplete="off"
+                    autoCapitalize="words"
+                    autoCorrect="off"
+                    enterKeyHint="next"
                     className={inputClass}
                   />
                   {errors.partnerName && <p className="text-red-500 text-xs mt-1">{errors.partnerName.message}</p>}
@@ -215,9 +231,21 @@ export default function S5_LeadCapture() {
                 <div>
                   <label className="block text-xs font-medium text-muted mb-1.5">Email</label>
                   <input
-                    {...register('email')}
+                    {...register('email', {
+                      required: 'Please enter your email',
+                      pattern: {
+                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                        message: 'Please enter a valid email',
+                      },
+                    })}
                     type="email"
-                    placeholder="Email"
+                    inputMode="email"
+                    placeholder="you@example.com"
+                    autoComplete="email"
+                    autoCapitalize="none"
+                    autoCorrect="off"
+                    spellCheck={false}
+                    enterKeyHint="next"
                     className={inputClass}
                   />
                   {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
@@ -226,9 +254,18 @@ export default function S5_LeadCapture() {
                 <div>
                   <label className="block text-xs font-medium text-muted mb-1.5">Phone</label>
                   <input
-                    {...register('phone')}
+                    {...register('phone', {
+                      required: 'Please enter your phone number',
+                      validate: (val) => {
+                        const digits = (val || '').replace(/\D/g, '')
+                        return (digits.length >= 10 && digits.length <= 15) || 'Please enter a valid phone number'
+                      },
+                    })}
                     type="tel"
-                    placeholder="Phone"
+                    inputMode="tel"
+                    placeholder="(555) 123-4567"
+                    autoComplete="tel"
+                    enterKeyHint="done"
                     className={inputClass}
                   />
                   {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>}

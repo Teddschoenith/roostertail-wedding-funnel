@@ -103,6 +103,7 @@ export default function EventTourQuestion({ config }: { config: EventConfig }) {
                 <input
                   type="date"
                   value={tourDate}
+                  min={new Date().toISOString().split('T')[0]}
                   onChange={(e) => setTourDate(e.target.value)}
                   className="w-full rounded-xl border border-border bg-white px-4 py-3 text-base text-black focus:border-blue focus:outline-none transition-colors mb-4"
                 />

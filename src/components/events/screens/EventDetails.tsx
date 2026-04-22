@@ -5,9 +5,32 @@ import SlideWrapper from '../EventSlideWrapper'
 import { useEventFunnelStore } from '@/lib/event-funnel-store'
 import type { EventConfig } from '@/lib/event-configs'
 
+function getInputAttrs(key: string): {
+  autoComplete: string
+  autoCapitalize: 'none' | 'sentences' | 'words'
+  autoCorrect: 'on' | 'off'
+  spellCheck: boolean
+} {
+  const k = key.toLowerCase()
+  if (k.includes('company') || k.includes('organization')) {
+    return { autoComplete: 'organization', autoCapitalize: 'words', autoCorrect: 'off', spellCheck: false }
+  }
+  if (k.includes('school')) {
+    return { autoComplete: 'organization', autoCapitalize: 'words', autoCorrect: 'off', spellCheck: false }
+  }
+  if (k.includes('person') || k.includes('name')) {
+    return { autoComplete: 'name', autoCapitalize: 'words', autoCorrect: 'off', spellCheck: false }
+  }
+  return { autoComplete: 'off', autoCapitalize: 'sentences', autoCorrect: 'on', spellCheck: true }
+}
+
 export default function EventDetails({ config }: { config: EventConfig }) {
   const { setAnswer, goNext } = useEventFunnelStore()
-  const { register, handleSubmit } = useForm()
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm()
 
   const inputClass = 'w-full rounded-xl border-2 border-border bg-white px-4 py-4 text-base text-black placeholder:text-muted/50 focus:border-blue focus:outline-none transition-colors'
 
@@ -28,14 +51,16 @@ export default function EventDetails({ config }: { config: EventConfig }) {
           {config.detailsSubtext}
         </p>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4" noValidate>
           {config.detailFields.map((field) => {
+            const err = errors[field.key]
+            const errMsg = typeof err?.message === 'string' ? err.message : undefined
             if (field.type === 'select' && field.options) {
               return (
                 <div key={field.key}>
                   <label className="block text-xs font-medium text-muted mb-1.5">{field.label}</label>
                   <select
-                    {...register(field.key, { required: field.required })}
+                    {...register(field.key, { required: field.required ? 'Please select an option' : false })}
                     className={`${inputClass} appearance-none`}
                     defaultValue=""
                   >
@@ -44,6 +69,7 @@ export default function EventDetails({ config }: { config: EventConfig }) {
                       <option key={opt} value={opt}>{opt}</option>
                     ))}
                   </select>
+                  {errMsg && <p className="text-red-500 text-xs mt-1">{errMsg}</p>}
                 </div>
               )
             }
@@ -52,22 +78,40 @@ export default function EventDetails({ config }: { config: EventConfig }) {
                 <div key={field.key}>
                   <label className="block text-xs font-medium text-muted mb-1.5">{field.label}</label>
                   <textarea
-                    {...register(field.key, { required: field.required })}
+                    {...register(field.key, {
+                      required: field.required ? 'This field is required' : false,
+                      minLength: field.required ? { value: 3, message: 'Tell us a bit more' } : undefined,
+                    })}
                     placeholder={field.placeholder || field.label}
                     rows={3}
+                    autoCapitalize="sentences"
+                    autoCorrect="on"
+                    enterKeyHint="enter"
                     className={`${inputClass} resize-none`}
                   />
+                  {errMsg && <p className="text-red-500 text-xs mt-1">{errMsg}</p>}
                 </div>
               )
             }
+            const attrs = getInputAttrs(field.key)
             return (
               <div key={field.key}>
                 <label className="block text-xs font-medium text-muted mb-1.5">{field.label}</label>
                 <input
-                  {...register(field.key, { required: field.required })}
+                  {...register(field.key, {
+                    required: field.required ? 'This field is required' : false,
+                    minLength: field.required ? { value: 2, message: 'Please enter a valid value' } : undefined,
+                  })}
+                  type="text"
                   placeholder={field.placeholder || field.label}
+                  autoComplete={attrs.autoComplete}
+                  autoCapitalize={attrs.autoCapitalize}
+                  autoCorrect={attrs.autoCorrect}
+                  spellCheck={attrs.spellCheck}
+                  enterKeyHint="next"
                   className={inputClass}
                 />
+                {errMsg && <p className="text-red-500 text-xs mt-1">{errMsg}</p>}
               </div>
             )
           })}

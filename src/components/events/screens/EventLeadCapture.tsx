@@ -144,12 +144,20 @@ export default function EventLeadCapture({ config }: { config: EventConfig }) {
                 <span>{selectedRole} - change</span>
               </button>
 
-              <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+              <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4" noValidate>
                 <div>
                   <label className="block text-xs font-medium text-muted mb-1.5">Your name</label>
                   <input
-                    {...register('yourName', { required: 'Name is required' })}
+                    {...register('yourName', {
+                      required: 'Please enter your name',
+                      minLength: { value: 2, message: 'Please enter your full name' },
+                    })}
+                    type="text"
                     placeholder="Your name"
+                    autoComplete="name"
+                    autoCapitalize="words"
+                    autoCorrect="off"
+                    enterKeyHint="next"
                     className={inputClass}
                   />
                   {errors.yourName && <p className="text-red-500 text-xs mt-1">{errors.yourName.message}</p>}
@@ -158,9 +166,21 @@ export default function EventLeadCapture({ config }: { config: EventConfig }) {
                 <div>
                   <label className="block text-xs font-medium text-muted mb-1.5">Email</label>
                   <input
-                    {...register('email', { required: 'Email is required' })}
+                    {...register('email', {
+                      required: 'Please enter your email',
+                      pattern: {
+                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                        message: 'Please enter a valid email',
+                      },
+                    })}
                     type="email"
-                    placeholder="Email"
+                    inputMode="email"
+                    placeholder="you@example.com"
+                    autoComplete="email"
+                    autoCapitalize="none"
+                    autoCorrect="off"
+                    spellCheck={false}
+                    enterKeyHint="next"
                     className={inputClass}
                   />
                   {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
@@ -169,22 +189,44 @@ export default function EventLeadCapture({ config }: { config: EventConfig }) {
                 <div>
                   <label className="block text-xs font-medium text-muted mb-1.5">Phone</label>
                   <input
-                    {...register('phone')}
+                    {...register('phone', {
+                      required: 'Please enter your phone number',
+                      validate: (val) => {
+                        const digits = (val || '').replace(/\D/g, '')
+                        return (digits.length >= 10 && digits.length <= 15) || 'Please enter a valid phone number'
+                      },
+                    })}
                     type="tel"
-                    placeholder="Phone"
+                    inputMode="tel"
+                    placeholder="(555) 123-4567"
+                    autoComplete="tel"
+                    enterKeyHint={config.showCompanyUrl ? 'next' : 'done'}
                     className={inputClass}
                   />
+                  {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>}
                 </div>
 
                 {config.showCompanyUrl && (
                   <div>
                     <label className="block text-xs font-medium text-muted mb-1.5">Company website (optional)</label>
                     <input
-                      {...register('companyUrl')}
+                      {...register('companyUrl', {
+                        pattern: {
+                          value: /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/\S*)?$/i,
+                          message: 'Please enter a valid website URL',
+                        },
+                      })}
                       type="url"
-                      placeholder="Company website (optional)"
+                      inputMode="url"
+                      placeholder="yourcompany.com"
+                      autoComplete="url"
+                      autoCapitalize="none"
+                      autoCorrect="off"
+                      spellCheck={false}
+                      enterKeyHint="done"
                       className={inputClass}
                     />
+                    {errors.companyUrl && <p className="text-red-500 text-xs mt-1">{errors.companyUrl.message}</p>}
                   </div>
                 )}
 
